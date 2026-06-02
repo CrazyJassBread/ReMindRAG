@@ -22,14 +22,20 @@ def main():
     parser = argparse.ArgumentParser(description='Run ReMindRag Test---Multi-Hop')
     parser.add_argument('--title_index', type=int, required=True, help='Test Index')
     parser.add_argument('--test_name', type=str, default="test", help='Test Name')
-    parser.add_argument('--question_type', type=str, choices=["origin", "similar", "different"], help='Question Type: origin, similar or different')
+    parser.add_argument('--question_type', type=str, default="origin", choices=["origin", "similar", "different"], help='Question Type: origin, similar or different')
     parser.add_argument('--model_name', type=str, default="gpt-4o-mini", help='Backbone Model Name')
+    parser.add_argument('--judge_model', type=str, default="gpt-4o-2024-11-20", help='Model for answer rewriting and grading')
+    parser.add_argument('--backbone_api_index', type=int, default=0, help='API entry used by the backbone model')
+    parser.add_argument('--judge_api_index', type=int, default=0, help='API entry used by the judge model')
+    parser.add_argument('--do_update', action='store_true', help='Update traversal memory after answering this query')
+    parser.add_argument('--strong_connection_threshold', type=float, default=0.5, help='Strong-memory connection threshold')
     args = parser.parse_args()
 
     title_index = args.title_index
     test_name = args.test_name
     model_name = args.model_name
     query_type = args.question_type
+    judge_model = args.judge_model
 
     right_num = 0
     total_num = 0
@@ -66,8 +72,10 @@ Answer:
     with open('../api_key.json', 'r', encoding='utf-8') as file:
         api_data = json.load(file)
 
-    base_url = api_data[0]["base_url"]
-    api_key = api_data[0]["api_key"]
+    backbone_api = api_data[args.backbone_api_index]
+    judge_api = api_data[args.judge_api_index]
+    base_url = backbone_api["base_url"]
+    api_key = backbone_api["api_key"]
     model_cache = "../model_cache"
 
     chunk_agent = OpenaiAgent(base_url, api_key, model_name)
@@ -78,8 +86,8 @@ Answer:
     chunker = NaiveChunker("nomic-ai/nomic-embed-text-v2-moe", model_cache, max_token_length=750, context_sentence=0)
     tokenizer = AutoTokenizer.from_pretrained("nomic-ai/nomic-embed-text-v2-moe",cache_dir = model_cache)
 
-    ans_rewrite_agent = OpenaiAgent(base_url, api_key, "gpt-4o-2024-11-20")
-    ans_check_agent = OpenaiAgent(base_url, api_key, "gpt-4o-2024-11-20")
+    ans_rewrite_agent = OpenaiAgent(judge_api["base_url"], judge_api["api_key"], judge_model)
+    ans_check_agent = OpenaiAgent(judge_api["base_url"], judge_api["api_key"], judge_model)
 
     timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
     log_path = f"./database/{test_name}/{{title}}/log_{timestamp}.log"
@@ -129,7 +137,7 @@ Answer:
         database_description = f"Database title: wiki",
         save_dir=f"database/{test_name}/{title_index}",
         edge_weight_coefficient=0.1,
-        strong_connection_threshold=0.5
+        strong_connection_threshold=args.strong_connection_threshold
         
     )
 
@@ -141,9 +149,21 @@ Answer:
     else:
         print(f"{title_index} --- Data already loaded.")
 
+    agents = {
+        "chunk_agent": chunk_agent,
+        "kg_agent": kg_agent,
+        "generate_agent": generate_agent,
+        "ans_rewrite_agent": ans_rewrite_agent,
+        "ans_check_agent": ans_check_agent,
+    }
+    construction_usage = {
+        field: sum(agent.get_usage()[field] for agent in agents.values())
+        for field in ["requests", "prompt_tokens", "completion_tokens", "total_tokens"]
+    }
+
     print(f"{title_index} Handle question")
 
-    raw_response, chunks, edges = rag.generate_response(chat_history=[], user_input=query, do_update=False, force_do_rag=True, max_jumps=10)
+    raw_response, chunks, edges = rag.generate_response(chat_history=[], user_input=query, do_update=args.do_update, force_do_rag=True, max_jumps=10)
     response = response_format.format(query = query, output = raw_response, chunks = str(chunks), edges = str(edges))
 
     ans_rewrite_input = ans_rewrite_prompt.format(question = query, og_output= response)
@@ -152,6 +172,17 @@ Answer:
     ans_check_input = ans_checck_prompt.format(question= query, reference_answer=ans, generated_output=rewrite_response)
     ans_check_response = ans_check_agent.generate_response("", [{"role":"user","content":ans_check_input}])
 
+    usage = {name: agent.get_usage() for name, agent in agents.items()}
+    usage["total"] = {
+        field: sum(item[field] for item in usage.values())
+        for field in ["requests", "prompt_tokens", "completion_tokens", "total_tokens"]
+    }
+    usage["construction"] = construction_usage
+    usage["query_and_grade"] = {
+        field: usage["total"][field] - construction_usage[field]
+        for field in ["requests", "prompt_tokens", "completion_tokens", "total_tokens"]
+    }
+
     all_inputs = {
         "query": query,
         "response": response,
@@ -159,7 +190,17 @@ Answer:
         "real_ans": ans,
         "evidence": evidence,
         "ans_check_input": ans_check_input,
-        "check_response": ans_check_response
+        "check_response": ans_check_response,
+        "config": {
+            "model_name": model_name,
+            "judge_model": judge_model,
+            "question_type": query_type,
+            "do_update": args.do_update,
+            "strong_connection_threshold": args.strong_connection_threshold,
+            "backbone_api_index": args.backbone_api_index,
+            "judge_api_index": args.judge_api_index,
+        },
+        "usage": usage,
     }
 
     total_num += 1
@@ -174,7 +215,7 @@ Answer:
         print(f"Ans Check Output Error: {ans_check_response}")
 
 
-    with open(f"database/{test_name}/{title_index}/input.json", "w", encoding="utf-8") as f:
+    with open(f"database/{test_name}/{title_index}/input_{query_type}.json", "w", encoding="utf-8") as f:
         json.dump(all_inputs, f, ensure_ascii=False, indent=4)
     
 

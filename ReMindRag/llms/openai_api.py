@@ -14,6 +14,12 @@ class OpenaiAgent(AgentBase):
         self.api_key = api_key
         self.max_retries = max_retries
         self.retry_delay = retry_delay
+        self.usage = {
+            "requests": 0,
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0,
+        }
 
         self.client = OpenAI(
             base_url=self.base_url,
@@ -37,6 +43,11 @@ class OpenaiAgent(AgentBase):
                     seed=123,
                     temperature=0
                 )
+                self.usage["requests"] += 1
+                if response.usage:
+                    self.usage["prompt_tokens"] += response.usage.prompt_tokens or 0
+                    self.usage["completion_tokens"] += response.usage.completion_tokens or 0
+                    self.usage["total_tokens"] += response.usage.total_tokens or 0
                 return response.choices[0].message.content
                 
             except (APIConnectionError, APIError, RateLimitError,
@@ -53,3 +64,6 @@ class OpenaiAgent(AgentBase):
                     continue
                 else:
                     raise Exception(f"Failed after {self.max_retries} retries. Last error: {str(last_error)}") from last_error
+
+    def get_usage(self) -> Dict[str, int]:
+        return dict(self.usage)
