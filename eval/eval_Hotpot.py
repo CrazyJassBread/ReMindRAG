@@ -24,11 +24,13 @@ def main():
     parser.add_argument('--test_name', type=str, default="test", help='Test Name')
     parser.add_argument('--question_type', type=str, choices=["origin", "similar", "different"], help='Question Type: origin, similar or different')
     parser.add_argument('--model_name', type=str, default="gpt-4o-mini", help='Backbone Model Name')
+    parser.add_argument('--judge_model_name', type=str, default=None, help='Model name for answer rewrite/check')
     args = parser.parse_args()
 
     title_index = args.title_index
     test_name = args.test_name
     model_name = args.model_name
+    judge_model_name = args.judge_model_name or model_name
     query_type = args.question_type
 
     right_num = 0
@@ -78,8 +80,8 @@ Answer:
     chunker = NaiveChunker("nomic-ai/nomic-embed-text-v2-moe", model_cache, max_token_length=750, context_sentence=0)
     tokenizer = AutoTokenizer.from_pretrained("nomic-ai/nomic-embed-text-v2-moe",cache_dir = model_cache)
 
-    ans_rewrite_agent = OpenaiAgent(base_url, api_key, "gpt-4o-2024-11-20")
-    ans_check_agent = OpenaiAgent(base_url, api_key, "gpt-4o-2024-11-20")
+    ans_rewrite_agent = OpenaiAgent(base_url, api_key, judge_model_name)
+    ans_check_agent = OpenaiAgent(base_url, api_key, judge_model_name)
 
     timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
     log_path = f"./database/{test_name}/{{title}}/log_{timestamp}.log"

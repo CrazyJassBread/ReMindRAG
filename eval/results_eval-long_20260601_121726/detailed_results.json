@@ -1,0 +1,93 @@
+[
+    {
+        "index": 0,
+        "title": "José Luis Picardo",
+        "correct": 5,
+        "total": 6,
+        "rate": 0.8333333333333334
+    },
+    {
+        "index": 2,
+        "title": "2023 French pension reform unrest",
+        "correct": 9,
+        "total": 11,
+        "rate": 0.8181818181818182
+    },
+    {
+        "index": 1,
+        "title": "Urban planning of Barcelona",
+        "correct": 6,
+        "total": 9,
+        "rate": 0.6666666666666666
+    },
+    {
+        "index": 4,
+        "title": "Claude List",
+        "correct": 4,
+        "total": 5,
+        "rate": 0.8
+    },
+    {
+        "index": 3,
+        "title": "2023 Turkey–Syria earthquake",
+        "correct": 7,
+        "total": 10,
+        "rate": 0.7
+    },
+    {
+        "index": 5,
+        "title": "Climate change in Washington (state)",
+        "correct": 5,
+        "total": 5,
+        "rate": 1.0
+    },
+    {
+        "index": 7,
+        "title": "Foreign Cattle Market",
+        "correct": 8,
+        "total": 9,
+        "rate": 0.8888888888888888
+    },
+    {
+        "index": 6,
+        "title": "Execution of Nagaenthran K. Dharmalingam",
+        "correct": 6,
+        "total": 10,
+        "rate": 0.6
+    },
+    {
+        "index": 8,
+        "title": "Governorship of Glenn Youngkin",
+        "correct": 3,
+        "total": 5,
+        "rate": 0.6
+    },
+    {
+        "index": 10,
+        "title": "History of NBC",
+        "correct": 5,
+        "total": 5,
+        "rate": 1.0
+    },
+    {
+        "index": 9,
+        "title": "Hells Angels MC criminal allegations and incidents in the United States",
+        "correct": 2,
+        "total": 8,
+        "rate": 0.25
+    },
+    {
+        "index": 19,
+        "title": "57th Medical Detachment",
+        "correct": 3,
+        "total": 5,
+        "rate": 0.6
+    },
+    {
+        "index": 16,
+        "title": "Street names in Barcelona",
+        "correct": 3,
+        "total": 6,
+        "rate": 0.5
+    }
+]

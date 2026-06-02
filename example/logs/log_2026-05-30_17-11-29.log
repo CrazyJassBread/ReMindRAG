@@ -1,0 +1,262 @@
+ReMindRag - INFO - Start Initail ReMindRag.
+PreProcessing - INFO - Created New Cache : ./Rag_Cache/split_question_cache.json
+ReMindRag - INFO - Initialize ReMindRag Successfully.
+ReMindRag - INFO - Load File: ./example_data.txt.
+Database - INFO - Chunking...
+Database - INFO - Get 2 Chunks.
+Database - INFO - Do Infomation Extraction in Chunk 0/2
+Database - INFO - Do Infomation Extraction in Chunk 1/2
+Database - INFO - Finish Infomation Extraction.
+Database - DEBUG - Trans Entity:Sacred Oath to Similar Entity:Sacred oath.
+Database - DEBUG - Trans Entity:Shield to Similar Entity:Shield.
+Database - DEBUG - Same Relation: ['Paladin_Sacred oath'].
+Database - DEBUG - Same Relation: ['Paladin_Evil'].
+Database - DEBUG - Same Relation: ['Extra Attack_Attack action'].
+Database - DEBUG - Unknown Entity: Movement Found While Adding Relation: ['Avenging Angel', 'Avenging Angel grants flying speed of 60 feet.', 'Movement']
+Database - DEBUG - Same Relation: ['Paladin_Shield'].
+Database - DEBUG - Same Relation: ['Paladin_Charisma'].
+Database - DEBUG - Trans Entity:Paladin to Similar Entity:Paladin.
+Database - DEBUG - Trans Entity:Plate armor to Similar Entity:Plate armor.
+Database - DEBUG - Trans Entity:Sword to Similar Entity:Sword.
+Database - DEBUG - Trans Entity:Shield to Similar Entity:Shield.
+Database - DEBUG - Trans Entity:Divine energy to Similar Entity:Divine energy.
+Database - DEBUG - Trans Entity:Human to Similar Entity:Human.
+Database - DEBUG - Trans Entity:Dwarf to Similar Entity:Dwarf.
+Database - DEBUG - Trans Entity:Elf to Similar Entity:Elf.
+Database - DEBUG - Trans Entity:Orc to Similar Entity:Orc.
+Database - DEBUG - Trans Entity:Giant to Similar Entity:Giant.
+Database - DEBUG - Trans Entity:Sacred oath to Similar Entity:Sacred oath.
+Database - DEBUG - Trans Entity:Cause of righteousness to Similar Entity:Righteousness.
+Database - DEBUG - Trans Entity:Justice to Similar Entity:Justice.
+Database - DEBUG - Trans Entity:Evil to Similar Entity:Evil.
+Database - DEBUG - Trans Entity:Divine magic to Similar Entity:Divine magic.
+Database - DEBUG - Trans Entity:Healing to Similar Entity:Healing.
+Database - DEBUG - Trans Entity:Proficiency bonus to Similar Entity:Proficiency Bonus.
+Database - DEBUG - Trans Entity:Divine Sense to Similar Entity:Divine Sense.
+Database - DEBUG - Trans Entity:Lay on Hands to Similar Entity:Lay on Hands.
+Database - DEBUG - Trans Entity:Divine Smite to Similar Entity:Divine Smite.
+Database - DEBUG - Trans Entity:Fighting Style to Similar Entity:Fighting Style.
+Database - DEBUG - Trans Entity:Spellcasting to Similar Entity:Spellcasting.
+Database - DEBUG - Trans Entity:Divine Health to Similar Entity:Divine Health.
+Database - DEBUG - Trans Entity:Sacred Oath to Similar Entity:Sacred oath.
+Database - DEBUG - Trans Entity:Ability Score Improvement to Similar Entity:Ability Score Improvement.
+Database - DEBUG - Trans Entity:Extra Attack to Similar Entity:Extra Attack.
+Database - DEBUG - Trans Entity:Aura of Protection to Similar Entity:Aura of Protection.
+Database - DEBUG - Trans Entity:Aura of Courage to Similar Entity:Aura of Courage.
+Database - DEBUG - Trans Entity:Improved Divine Smite to Similar Entity:Improved Divine Smite.
+Database - DEBUG - Trans Entity:Cleansing Touch to Similar Entity:Cleansing Touch.
+Database - DEBUG - Trans Entity:Oath of Devotion to Similar Entity:Oath of Devotion.
+Database - DEBUG - Trans Entity:Oath of the Ancients to Similar Entity:Oath of the Ancients.
+Database - DEBUG - Trans Entity:Oath of Vengeance to Similar Entity:Oath of Vengeance.
+Database - DEBUG - Trans Entity:Channel Divinity to Similar Entity:Channel Divinity.
+Database - DEBUG - Trans Entity:Sacred Weapon to Similar Entity:Sacred Weapon.
+Database - DEBUG - Trans Entity:Turn the Unholy to Similar Entity:Turn the Unholy.
+Database - DEBUG - Trans Entity:Holy Nimbus to Similar Entity:Holy Nimbus.
+Database - DEBUG - Trans Entity:Nature's Wrath to Similar Entity:Nature's Wrath.
+Database - DEBUG - Trans Entity:Turn the Faithless to Similar Entity:Turn the Faithless.
+Database - DEBUG - Trans Entity:Aura of Warding to Similar Entity:Aura of Warding.
+Database - DEBUG - Trans Entity:Undying Sentinel to Similar Entity:Undying Sentinel.
+Database - DEBUG - Trans Entity:Elder Champion to Similar Entity:Elder Champion.
+Database - DEBUG - Trans Entity:Abjure Enemy to Similar Entity:Abjure Enemy.
+Database - DEBUG - Trans Entity:Vow of Enmity to Similar Entity:Vow of Enmity.
+Database - DEBUG - Trans Entity:Relentless Avenger to Similar Entity:Relentless Avenger.
+Database - DEBUG - Trans Entity:Soul of Vengeance to Similar Entity:Soul of Vengeance.
+Database - DEBUG - Trans Entity:Avenging Angel to Similar Entity:Avenging Angel.
+Database - DEBUG - Trans Entity:Hit Points to Similar Entity:Hit Points.
+Database - DEBUG - Trans Entity:Hit Dice to Similar Entity:Hit Dice.
+Database - DEBUG - Trans Entity:Shield to Similar Entity:Shield.
+Database - DEBUG - Trans Entity:Holy symbol to Similar Entity:Holy symbol.
+Database - DEBUG - Trans Entity:Spell slot to Similar Entity:Spell slot.
+Database - DEBUG - Trans Entity:Spellcasting focus to Similar Entity:Spellcasting focus.
+Database - DEBUG - Trans Entity:Tenets of Devotion to Similar Entity:Tenets of Devotion.
+Database - DEBUG - Trans Entity:Honesty to Similar Entity:Honesty.
+Database - DEBUG - Trans Entity:Courage to Similar Entity:Courage.
+Database - DEBUG - Trans Entity:Compassion to Similar Entity:Compassion.
+Database - DEBUG - Trans Entity:Honor to Similar Entity:Honor.
+Database - DEBUG - Trans Entity:Duty to Similar Entity:Duty.
+Database - DEBUG - Trans Entity:Tenets of the Ancients to Similar Entity:Tenets of the Ancients.
+Database - DEBUG - Trans Entity:Kindle the Light to Similar Entity:Kindle the Light.
+Database - DEBUG - Trans Entity:Shelter the Light to Similar Entity:Shelter the Light.
+Database - DEBUG - Trans Entity:Preserve Your Own Light to Similar Entity:Preserve Your Own Light.
+Database - DEBUG - Trans Entity:Be the Light to Similar Entity:Be the Light.
+Database - DEBUG - Trans Entity:Tenets of Vengeance to Similar Entity:Tenets of Vengeance.
+Database - DEBUG - Trans Entity:Fight the Greater Evil to Similar Entity:Fight the Greater Evil.
+Database - DEBUG - Trans Entity:No Mercy for the Wicked to Similar Entity:No Mercy for the Wicked.
+Database - DEBUG - Trans Entity:By Any Means Necessary to Similar Entity:By Any Means Necessary.
+Database - DEBUG - Trans Entity:Restitution to Similar Entity:Restitution.
+Database - DEBUG - Trans Entity:Strength to Similar Entity:Strength.
+Database - DEBUG - Trans Entity:Charisma to Similar Entity:Charisma.
+Database - DEBUG - Trans Entity:Constitution to Similar Entity:Constitution.
+Database - DEBUG - Trans Entity:Wisdom to Similar Entity:Wisdom.
+Database - DEBUG - Trans Entity:Spell save DC to Similar Entity:Spell save DC.
+Database - DEBUG - Trans Entity:Spell attack modifier to Similar Entity:Spell attack modifier.
+Database - DEBUG - Trans Entity:Athletics to Similar Entity:Athletics.
+Database - DEBUG - Trans Entity:Insight to Similar Entity:Insight.
+Database - DEBUG - Trans Entity:Intimidation to Similar Entity:Intimidation.
+Database - DEBUG - Trans Entity:Medicine to Similar Entity:Medicine.
+Database - DEBUG - Trans Entity:Persuasion to Similar Entity:Persuasion.
+Database - DEBUG - Trans Entity:Religion to Similar Entity:Religion.
+Database - DEBUG - Trans Entity:Noble to Similar Entity:Noble.
+Database - DEBUG - Trans Entity:Torm to Similar Entity:Torm.
+Database - DEBUG - Trans Entity:Tyr to Similar Entity:Tyr.
+Database - DEBUG - Trans Entity:Heironeous to Similar Entity:Heironeous.
+Database - DEBUG - Trans Entity:Paladine to Similar Entity:Paladine.
+Database - DEBUG - Trans Entity:Kiri-Jolith to Similar Entity:Kiri-Jolith.
+Database - DEBUG - Trans Entity:Dol Arrah to Similar Entity:Dol Arrah.
+Database - DEBUG - Trans Entity:Silver Flame to Similar Entity:Silver Flame.
+Database - DEBUG - Trans Entity:Bahamut to Similar Entity:Bahamut.
+Database - DEBUG - Trans Entity:Athena to Similar Entity:Athena.
+Database - DEBUG - Trans Entity:Re-Horakhty to Similar Entity:Re-Horakhty.
+Database - DEBUG - Trans Entity:Heimdall to Similar Entity:Heimdall.
+Database - DEBUG - Trans Entity:Frightened to Similar Entity:Frightened.
+Database - DEBUG - Trans Entity:Charmed to Similar Entity:Charmed.
+Database - DEBUG - Trans Entity:Poison to Similar Entity:Poison.
+Database - DEBUG - Trans Entity:Disease to Similar Entity:Disease.
+Database - DEBUG - Trans Entity:Construct to Similar Entity:Construct.
+Database - DEBUG - Trans Entity:Long rest to Similar Entity:Long rest.
+Database - DEBUG - Trans Entity:Short rest to Similar Entity:Short rest.
+Database - DEBUG - Trans Entity:Bonus action to Similar Entity:Bonus action.
+Database - DEBUG - Trans Entity:Reaction to Similar Entity:Reaction.
+Database - DEBUG - Trans Entity:Opportunity attack to Similar Entity:Opportunity attack.
+Database - DEBUG - Same Relation: ['Paladin_Plate armor'].
+Database - DEBUG - Same Relation: ['Paladin_Shield'].
+Database - DEBUG - Same Relation: ['Paladin_Sacred oath'].
+Database - DEBUG - Same Relation: ['Paladin_Divine magic'].
+Database - DEBUG - Same Relation: ['Paladin_Evil'].
+Database - DEBUG - Same Relation: ['Paladin_Shield'].
+Database - DEBUG - Same Relation: ['Paladin_Holy symbol'].
+Database - DEBUG - Same Relation: ['Lay on Hands_Disease'].
+Database - DEBUG - Same Relation: ['Lay on Hands_Poison'].
+Database - DEBUG - Same Relation: ['Lay on Hands_Construct'].
+Database - DEBUG - Same Relation: ['Lay on Hands_Undead'].
+Database - DEBUG - Same Relation: ['Divine Health_Disease'].
+Database - DEBUG - Same Relation: ['Sacred oath_Oath of Devotion'].
+Database - DEBUG - Same Relation: ['Sacred oath_Oath of the Ancients'].
+Database - DEBUG - Same Relation: ['Sacred oath_Oath of Vengeance'].
+Database - DEBUG - Same Relation: ['Oath of Devotion_Sacred Weapon'].
+Database - DEBUG - Same Relation: ['Oath of Devotion_Turn the Unholy'].
+Database - DEBUG - Same Relation: ["Oath of the Ancients_Nature's Wrath"].
+Database - DEBUG - Same Relation: ['Oath of the Ancients_Turn the Faithless'].
+Database - DEBUG - Same Relation: ['Oath of Vengeance_Abjure Enemy'].
+Database - DEBUG - Same Relation: ['Oath of Vengeance_Vow of Enmity'].
+Database - DEBUG - Same Relation: ['Abjure Enemy_Frightened'].
+Database - DEBUG - Same Relation: ['Paladin_Aura of Protection'].
+Database - DEBUG - Same Relation: ['Paladin_Aura of Courage'].
+Database - DEBUG - Same Relation: ['Paladin_Improved Divine Smite'].
+Database - DEBUG - Same Relation: ['Paladin_Cleansing Touch'].
+Database - DEBUG - Same Relation: ['Oath of Devotion_Holy Nimbus'].
+Database - DEBUG - Same Relation: ['Oath of the Ancients_Aura of Warding'].
+Database - DEBUG - Same Relation: ['Oath of the Ancients_Undying Sentinel'].
+Database - DEBUG - Same Relation: ['Oath of the Ancients_Elder Champion'].
+Database - DEBUG - Same Relation: ['Oath of Vengeance_Relentless Avenger'].
+Database - DEBUG - Same Relation: ['Oath of Vengeance_Soul of Vengeance'].
+Database - DEBUG - Same Relation: ['Oath of Vengeance_Avenging Angel'].
+Database - DEBUG - Same Relation: ['Paladin_Strength'].
+Database - DEBUG - Same Relation: ['Paladin_Charisma'].
+Database - DEBUG - Same Relation: ['Paladin_Constitution'].
+Database - DEBUG - Same Relation: ['Paladin_Wisdom'].
+Database - DEBUG - Same Relation: ['Paladin_Noble'].
+PreProcessing - INFO - ---------------------------------------------------------------------------------------------------------
+PreProcessing - INFO - Start Query Process...
+PreProcessing - INFO - Force do Rag Seach
+PreProcessing - INFO - Origin Query: What does a level 20 paladin gain?
+PathFinder - INFO - Start PathFinder Process...
+PathFinder - INFO - Get Query: What does a level 20 paladin gain?
+PathFinder - DEBUG - Initial Entity: ['Paladin', 'Paladine']
+Database - DEBUG - Start Quick Query: What does a level 20 paladin gain? in Entity: Paladin
+Database - DEBUG - Start Quick Query: What does a level 20 paladin gain? in Entity: Paladine
+PathFinder - INFO - Quick Search Results --- entity:2, chunk:0, edge:0.
+PathFinder - DEBUG - Quick Search Entity List:
+['Paladin', 'Paladine']
+PathFinder - DEBUG - Quick Search Chunk List:
+[]
+PathFinder - DEBUG - Quick Search Edge List:
+[]
+PathFinder - DEBUG - Chunk Summary:
+{}
+PathFinder - DEBUG - Function judge_sufficient_information Output:
+The query asks about the class features gained by a paladin at level 20, typically from Dungeons & Dragons 5e. However, the provided data includes no edges or chunk summaries, meaning no relevant information is available. Without any source material or common knowledge verification (which is not permitted as a substitute for missing data), it is impossible to determine what a level 20 paladin gains. Therefore, the information is insufficient.
+
+```cot-ans
+no
+```
+PathFinder - INFO - Data Enough? False
+PathFinder - INFO - Start Search At Entity Node:Paladin.
+PathFinder - DEBUG - Out Dgree: {'Paladin': 87, 'Paladine': 3}
+PathFinder - INFO - ======= Current Entity: Paladin === Jumps: 0 ===========================================================
+PathFinder - DEBUG - Entity Now:['Paladin', 'Paladine']
+PathFinder - DEBUG - Chunks Now:[]
+PathFinder - INFO - Current Node Edge --- Relations:88, Connections:False.
+PathFinder - DEBUG - Entity Paladine Already in Entity Set.
+PathFinder - DEBUG - Find Next Node... With Data Size --- edges:7832, chunk summary:2, anchor chunk titles:6684
+PathFinder - DEBUG - Function find_next_node Output:
+The query asks about what a level 20 paladin gains. The current node "Paladin" has two anchors (anchor-1 and anchor-2) that both lead to chunks containing capstone features for level 20. Since the chunk for anchor-1 explicitly mentions "20th: Capstone feature from your Oath" in its summary, it is the most direct and relevant node to access next.
+
+```cot-ans
+entity:anchor-1
+```
+PathFinder - INFO - Select Next Node: entity:anchor-1
+PathFinder - INFO - Step into Entity: anchor-1
+PathFinder - DEBUG - Function judge_sufficient_information Output:
+The query asks what a level 20 paladin gains, which is a specific gameplay question. The provided data contains only entity names ('Paladin', 'Paladine', 'anchor-1') and a single edge linking 'Paladin' to 'anchor-1' with an unspecified relation. The chunk summary list is empty, meaning no textual information about paladin abilities or level progression is available. Without any summaries or explicit knowledge, it is impossible to determine what a level 20 paladin gains. Common-sense knowledge about Dungeons & Dragons cannot be reliably introduced because the knowledge graph provides no context or verification. Therefore, the information is insufficient.
+
+```cot-ans
+no
+```
+PathFinder - INFO - Data Enough? False
+PathFinder - INFO - =============================================================================================================
+PathFinder - DEBUG - Out Dgree: {'Paladin': 86, 'Paladine': 2, 'anchor-1': 134}
+PathFinder - INFO - ======= Current Entity: anchor-1 === Jumps: 1 ===========================================================
+PathFinder - DEBUG - Entity Now:['Paladin', 'Paladine', 'anchor-1']
+PathFinder - DEBUG - Chunks Now:[]
+PathFinder - INFO - Current Node Edge --- Relations:135, Connections:True.
+PathFinder - DEBUG - Entity Paladin Already in Entity Set.
+PathFinder - DEBUG - Entity Paladine Already in Entity Set.
+PathFinder - DEBUG - Find Next Node... With Data Size --- edges:15236, chunk summary:2, anchor chunk titles:10161
+PathFinder - INFO - Select Next Node: chunk:1
+PathFinder - INFO - Step into Chunk: 1
+PathFinder - INFO - Update Chunk Summary with Chunk:1.
+PathFinder - DEBUG - New Chunk Summary:
+{'chunk:1': 'Based on the provided text, a level 20 paladin gains the following: a +6 proficiency bonus, a Sacred Oath feature (specific to their chosen oath: Holy Nimbus for Oath of Devotion, Elder Champion for Oath of the Ancients, or Avenging Angel for Oath of Vengeance), and spell slots of 4 first-level, 3 second-level, 3 third-level, 3 fourth-level, and 2 fifth-level.'}
+PathFinder - DEBUG - Function judge_sufficient_information Output:
+The query asks what a level 20 paladin gains. The chunk summary directly states: a +6 proficiency bonus, a Sacred Oath feature (with specific options based on oath), and spell slots. This fully answers the query. The edges connect Paladin to anchor-1 to chunk:1, providing a clear path. No missing or conflicting information. Thus, sufficient.
+
+```cot-ans
+yes
+```
+PathFinder - INFO - Data Enough? True
+PathFinder - INFO - =============================================================================================================
+PathFinder - INFO - Stop Search --- Jumps: 2
+PathFinder - DEBUG - Start Node: ['Paladin', 'Paladine']
+PathFinder - DEBUG - Entities : ['Paladin', 'Paladine', 'anchor-1']
+PathFinder - DEBUG - Chunks : ['1']
+PathFinder - DEBUG - Paths:
+[{'from': 'Paladin', 'to': 'anchor-1', 'id': 'Paladin_anchor-1', 'type': 'relation'}, {'from': 'anchor-1', 'to': '1', 'id': 'anchor-1_1', 'type': 'connection'}]
+PathFinder - INFO - Update Knowledge Graph.
+PathFinder - DEBUG - Function get_update_relation_and_chunk Output:
+The query asks what a level 20 paladin gains. The provided chunk summary directly lists the gains: proficiency bonus, Sacred Oath feature, and spell slots. This chunk is highly relevant as it contains the complete answer. The edges connect the general entity "Paladin" to anchor-1 and then to the chunk, forming the path that leads to the relevant information. Both edges are necessary for retrieving the answer and thus are valuable.
+
+```cot-ans
+{
+  "edges": ["Paladin_anchor-1", "anchor-1_1"],
+  "chunks": [1]
+}
+```
+PathFinder - DEBUG - Update Dict: {'edges': ['Paladin_anchor-1', 'anchor-1_1'], 'chunks': ['1']}
+PathFinder - WARNING - Update: Can't Find Available Path (Start with Paladine).
+PathFinder - INFO - Enhance 2 Edges, Punish 0.
+Database - INFO - Enhance Path anchor-1_1.
+Database - INFO - Enhance Path Paladin_anchor-1.
+PathFinder - DEBUG - Enhance Edges:
+[('connection', 'anchor-1_1'), ('relation', 'Paladin_anchor-1')]
+PathFinder - DEBUG - Punish Edges:
+[]
+PreProcessing - DEBUG - Get Rag Chunk Summary:
+chunk:1:Based on the provided text, a level 20 paladin gains the following: a +6 proficiency bonus, a Sacred Oath feature (specific to their chosen oath: Holy Nimbus for Oath of Devotion, Elder Champion for Oath of the Ancients, or Avenging Angel for Oath of Vengeance), and spell slots of 4 first-level, 3 second-level, 3 third-level, 3 fourth-level, and 2 fifth-level.
+
+PreProcessing - DEBUG - Get Rag Edges:
+['from entity:Paladin to entity:anchor-1 with relations: relation of entity:Paladin to entity:anchor-1', 'from entity:anchor-1 to chunk:1']
+PreProcessing - INFO - Origin Query: What does a level 20 paladin gain?
+PreProcessing - INFO - Response:
+A level 20 paladin gains a +6 proficiency bonus, a Sacred Oath feature (Holy Nimbus for Oath of Devotion, Elder Champion for Oath of the Ancients, or Avenging Angel for Oath of Vengeance), and spell slots: 4 first-level, 3 second-level, 3 third-level, 3 fourth-level, and 2 fifth-level (chunk:1).
+PreProcessing - INFO - End PreProcessing Process.

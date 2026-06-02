@@ -39,11 +39,9 @@ Download the HuggingFace model [nomic-ai/nomic-embed-text-v2-moe](https://huggin
 
 Load your HuggingFace token:
 
-```shell
+```shell 
 $env:HF_TOKEN = "hf_YourTokenHere"
 ```
-
-
 
 ### Run Example
 
@@ -165,6 +163,29 @@ python start_LooGLE.py --test_name "eval-long" --data_type "longdep_qa"
 python start_LooGLE.py --test_name "eval-simple" --data_type "shortdep_qa"
 python start_Hotpot.py --test_name "eval-multihop"
 ```
+
+If your provider requires specific model names (for example, DeepSeek), pass them explicitly:
+
+```shell
+python start_LooGLE.py --test_name "eval-long" --data_type "longdep_qa" --model_name "deepseek-v4-flash" --judge_model_name "deepseek-v4-flash"
+python start_Hotpot.py --test_name "eval-multihop" --model_name "deepseek-v4-pro" --judge_model_name "deepseek-v4-pro"
+```
+
+The `--judge_model_name` option controls the model used for answer rewrite and answer checking. If not set, it defaults to `--model_name`.
+
+**LLM-only baseline (no ReMindRAG)**
+
+Use the LLM-only scripts for a direct baseline comparison:
+
+```shell
+cd eval
+python start_LooGLE_llm_only.py --test_name "llm-only-long" --data_type "longdep_qa" --model_name "deepseek-v4-flash" --judge_model_name "deepseek-v4-flash"
+```
+
+Optional flags:
+
+- `--use_context`: prepend the full context to each question
+- `--system_prompt "..."`: custom system prompt for the LLM
 
 For more parameters, use the "--help" command.
 

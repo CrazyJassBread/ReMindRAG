@@ -19,5 +19,10 @@ eval/dataset_cache/*
 
 eval/database/*
 !eval/database/.gitkeep
-
+eval/logs/
 eval/data_modify/
+
+example/Rag_Cache/
+api/
+
+.vscode/

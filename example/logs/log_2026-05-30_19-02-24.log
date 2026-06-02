@@ -1,0 +1,422 @@
+ReMindRag - INFO - Start Initail ReMindRag.
+ReMindRag - INFO - Initialize ReMindRag Successfully.
+ReMindRag - INFO - Load File: ./example_data.txt.
+Database - INFO - Chunking...
+Database - INFO - Get 2 Chunks.
+Database - INFO - Do Infomation Extraction in Chunk 0/2
+Database - INFO - Do Infomation Extraction in Chunk 1/2
+Database - INFO - Finish Infomation Extraction.
+Database - DEBUG - Trans Entity:Ability Score Improvement to Similar Entity:Ability Score Improvement.
+Database - DEBUG - Trans Entity:Abjure Enemy to Similar Entity:Abjure Enemy.
+Database - DEBUG - Trans Entity:Aura of Courage to Similar Entity:Aura of Courage.
+Database - DEBUG - Trans Entity:Aura of Devotion to Similar Entity:Aura of Devotion.
+Database - DEBUG - Trans Entity:Aura of Protection to Similar Entity:Aura of Protection.
+Database - DEBUG - Trans Entity:Aura of Warding to Similar Entity:Aura of Warding.
+Database - DEBUG - Trans Entity:Avenging Angel to Similar Entity:Avenging Angel.
+Database - DEBUG - Trans Entity:Bahamut to Similar Entity:Bahamut.
+Database - DEBUG - Trans Entity:Be the Light to Similar Entity:Be the Light.
+Database - DEBUG - Trans Entity:By Any Means Necessary to Similar Entity:By Any Means Necessary.
+Database - DEBUG - Trans Entity:Cavaliers to Similar Entity:Cavalier.
+Database - DEBUG - Trans Entity:Celestial to Similar Entity:Celestial.
+Database - DEBUG - Trans Entity:Chain Mail to Similar Entity:Chain mail.
+Database - DEBUG - Trans Entity:Channel Divinity to Similar Entity:Channel Divinity.
+Database - DEBUG - Trans Entity:Cleansing Touch to Similar Entity:Cleansing Touch.
+Database - DEBUG - Trans Entity:Compassion to Similar Entity:Compassion.
+Database - DEBUG - Trans Entity:Construct to Similar Entity:Construct.
+Database - DEBUG - Trans Entity:Courage to Similar Entity:Courage.
+Database - DEBUG - Trans Entity:Cure Wounds to Similar Entity:Cure Wounds.
+Database - DEBUG - Trans Entity:Defense to Similar Entity:Defense.
+Database - DEBUG - Trans Entity:Divine Health to Similar Entity:Divine Health.
+Database - DEBUG - Trans Entity:Divine Sense to Similar Entity:Divine Sense.
+Database - DEBUG - Trans Entity:Divine Smite to Similar Entity:Divine Smite.
+Database - DEBUG - Trans Entity:Dol Arrah to Similar Entity:Dol Arrah.
+Database - DEBUG - Trans Entity:Dueling to Similar Entity:Dueling.
+Database - DEBUG - Trans Entity:Dungeon Master's Guide to Similar Entity:Dungeon Master's Guide.
+Database - DEBUG - Trans Entity:Duty to Similar Entity:Duty.
+Database - DEBUG - Trans Entity:Elder Champion to Similar Entity:Elder Champion.
+Database - DEBUG - Trans Entity:Explorer's Pack to Similar Entity:Explorer's pack.
+Database - DEBUG - Trans Entity:Extra Attack to Similar Entity:Extra Attack.
+Database - DEBUG - Trans Entity:Fey Knights to Similar Entity:Fey Knight.
+Database - DEBUG - Trans Entity:Fiend to Similar Entity:Fiend.
+Database - DEBUG - Trans Entity:Fight the Greater Evil to Similar Entity:Fight the Greater Evil.
+Database - DEBUG - Trans Entity:Fighting Style to Similar Entity:Fighting Style.
+Database - DEBUG - Trans Entity:Great Weapon Fighting to Similar Entity:Great Weapon Fighting.
+Database - DEBUG - Trans Entity:Green Knights to Similar Entity:Green Knight.
+Database - DEBUG - Trans Entity:Hallow to Similar Entity:Hallow.
+Database - DEBUG - Trans Entity:Heimdall to Similar Entity:Heimdall.
+Database - DEBUG - Trans Entity:Heironeous to Similar Entity:Heironeous.
+Database - DEBUG - Trans Entity:Hit Dice to Similar Entity:Hit Dice.
+Database - DEBUG - Trans Entity:Holy Nimbus to Similar Entity:Holy Nimbus.
+Database - DEBUG - Trans Entity:Holy Symbol to Similar Entity:Holy symbol.
+Database - DEBUG - Trans Entity:Honesty to Similar Entity:Honesty.
+Database - DEBUG - Trans Entity:Honor to Similar Entity:Honor.
+Database - DEBUG - Trans Entity:Horned Knights to Similar Entity:Horned Knight.
+Database - DEBUG - Trans Entity:Improved Divine Smite to Similar Entity:Improved Divine Smite.
+Database - DEBUG - Trans Entity:Javelin to Similar Entity:Javelin.
+Database - DEBUG - Trans Entity:Kindle the Light to Similar Entity:Kindle the Light.
+Database - DEBUG - Trans Entity:Kiri-Jolith to Similar Entity:Kiri-Jolith.
+Database - DEBUG - Trans Entity:Lay on Hands to Similar Entity:Lay on Hands.
+Database - DEBUG - Trans Entity:Martial Weapon to Similar Entity:Martial weapon.
+Database - DEBUG - Trans Entity:Nature's Wrath to Similar Entity:Nature's Wrath.
+Database - DEBUG - Trans Entity:No Mercy for the Wicked to Similar Entity:No Mercy for the Wicked.
+Database - DEBUG - Trans Entity:Noble to Similar Entity:Noble.
+Database - DEBUG - Trans Entity:Oath of Devotion to Similar Entity:Oath of Devotion.
+Database - DEBUG - Trans Entity:Oath of the Ancients to Similar Entity:Oath of the Ancients.
+Database - DEBUG - Trans Entity:Oath of Vengeance to Similar Entity:Oath of Vengeance.
+Database - DEBUG - Trans Entity:Oathbreaker to Similar Entity:Oathbreaker.
+Database - DEBUG - Trans Entity:Paladin to Similar Entity:Paladin.
+Database - DEBUG - Trans Entity:Paladine to Similar Entity:Paladine.
+Database - DEBUG - Trans Entity:Preserve Your Own Light to Similar Entity:Preserve Your Own Light.
+Database - DEBUG - Trans Entity:Priest's Pack to Similar Entity:Priest's pack.
+Database - DEBUG - Trans Entity:Protection to Similar Entity:Protection.
+Database - DEBUG - Trans Entity:Purity of Spirit to Similar Entity:Purity of Spirit.
+Database - DEBUG - Trans Entity:Re-Horakhty to Similar Entity:Re-Horakhty.
+Database - DEBUG - Trans Entity:Relentless Avenger to Similar Entity:Relentless Avenger.
+Database - DEBUG - Trans Entity:Restitution to Similar Entity:Restitution.
+Database - DEBUG - Trans Entity:Sacred Oath to Similar Entity:Sacred oath.
+Database - DEBUG - Trans Entity:Sacred Weapon to Similar Entity:Sacred Weapon.
+Database - DEBUG - Trans Entity:Shelter the Light to Similar Entity:Shelter the Light.
+Database - DEBUG - Trans Entity:Shield to Similar Entity:Shield.
+Database - DEBUG - Trans Entity:Silver Flame to Similar Entity:Silver Flame.
+Database - DEBUG - Trans Entity:Soul of Vengeance to Similar Entity:Soul of Vengeance.
+Database - DEBUG - Trans Entity:Spellcasting to Similar Entity:Spellcasting.
+Database - DEBUG - Trans Entity:Spellcasting Focus to Similar Entity:Spellcasting focus.
+Database - DEBUG - Trans Entity:Torm to Similar Entity:Torm.
+Database - DEBUG - Trans Entity:Turn the Faithless to Similar Entity:Turn the Faithless.
+Database - DEBUG - Trans Entity:Turn the Unholy to Similar Entity:Turn the Unholy.
+Database - DEBUG - Trans Entity:Tyr to Similar Entity:Tyr.
+Database - DEBUG - Trans Entity:Undead to Similar Entity:Undead.
+Database - DEBUG - Trans Entity:Undying Sentinel to Similar Entity:Undying Sentinel.
+Database - DEBUG - Trans Entity:Vow of Enmity to Similar Entity:Vow of Enmity.
+Database - DEBUG - Trans Entity:White Knights to Similar Entity:White Knight.
+Database - DEBUG - Same Relation: ['Paladin_Divine Sense'].
+Database - DEBUG - Same Relation: ['Paladin_Lay on Hands'].
+Database - DEBUG - Same Relation: ['Paladin_Divine Smite'].
+Database - DEBUG - Same Relation: ['Paladin_Fighting Style'].
+Database - DEBUG - Same Relation: ['Paladin_Spellcasting'].
+Database - DEBUG - Same Relation: ['Paladin_Divine Health'].
+Database - DEBUG - Same Relation: ['Paladin_Sacred oath'].
+Database - DEBUG - Same Relation: ['Paladin_Ability Score Improvement'].
+Database - DEBUG - Same Relation: ['Paladin_Extra Attack'].
+Database - DEBUG - Same Relation: ['Paladin_Aura of Protection'].
+Database - DEBUG - Same Relation: ['Paladin_Aura of Courage'].
+Database - DEBUG - Same Relation: ['Paladin_Improved Divine Smite'].
+Database - DEBUG - Same Relation: ['Paladin_Cleansing Touch'].
+Database - DEBUG - Same Relation: ['Oath of Devotion_Aura of Devotion'].
+Database - DEBUG - Same Relation: ['Oath of Devotion_Purity of Spirit'].
+Database - DEBUG - Same Relation: ['Oath of Devotion_Holy Nimbus'].
+Database - DEBUG - Same Relation: ['Oath of the Ancients_Aura of Warding'].
+Database - DEBUG - Same Relation: ['Oath of the Ancients_Undying Sentinel'].
+Database - DEBUG - Same Relation: ['Oath of the Ancients_Elder Champion'].
+Database - DEBUG - Same Relation: ['Oath of Vengeance_Relentless Avenger'].
+Database - DEBUG - Same Relation: ['Oath of Vengeance_Soul of Vengeance'].
+Database - DEBUG - Same Relation: ['Oath of Vengeance_Avenging Angel'].
+Database - DEBUG - Same Relation: ['Oath of Devotion_Cavalier'].
+Database - DEBUG - Same Relation: ['Oath of Devotion_White Knight'].
+Database - DEBUG - Same Relation: ['Oath of the Ancients_Fey Knight'].
+Database - DEBUG - Same Relation: ['Oath of the Ancients_Green Knight'].
+Database - DEBUG - Same Relation: ['Oath of the Ancients_Horned Knight'].
+Database - DEBUG - Same Relation: ['Oath of Devotion_Honesty'].
+Database - DEBUG - Same Relation: ['Oath of Devotion_Courage'].
+Database - DEBUG - Same Relation: ['Oath of Devotion_Compassion'].
+Database - DEBUG - Same Relation: ['Oath of Devotion_Honor'].
+Database - DEBUG - Same Relation: ['Oath of Devotion_Duty'].
+Database - DEBUG - Same Relation: ['Oath of the Ancients_Kindle the Light'].
+Database - DEBUG - Same Relation: ['Oath of the Ancients_Shelter the Light'].
+Database - DEBUG - Same Relation: ['Oath of the Ancients_Preserve Your Own Light'].
+Database - DEBUG - Same Relation: ['Oath of the Ancients_Be the Light'].
+Database - DEBUG - Same Relation: ['Oath of Vengeance_Fight the Greater Evil'].
+Database - DEBUG - Same Relation: ['Oath of Vengeance_No Mercy for the Wicked'].
+Database - DEBUG - Same Relation: ['Oath of Vengeance_By Any Means Necessary'].
+Database - DEBUG - Same Relation: ['Oath of Vengeance_Restitution'].
+Database - DEBUG - Same Relation: ['Oath of Devotion_Sacred Weapon'].
+Database - DEBUG - Same Relation: ['Oath of Devotion_Turn the Unholy'].
+Database - DEBUG - Same Relation: ["Oath of the Ancients_Nature's Wrath"].
+Database - DEBUG - Same Relation: ['Oath of the Ancients_Turn the Faithless'].
+Database - DEBUG - Same Relation: ['Oath of Vengeance_Abjure Enemy'].
+Database - DEBUG - Same Relation: ['Oath of Vengeance_Vow of Enmity'].
+Database - DEBUG - Same Relation: ['Divine Sense_Celestial'].
+Database - DEBUG - Same Relation: ['Divine Sense_Fiend'].
+Database - DEBUG - Same Relation: ['Divine Sense_Undead'].
+Database - DEBUG - Same Relation: ['Lay on Hands_Undead'].
+Database - DEBUG - Same Relation: ['Lay on Hands_Construct'].
+Database - DEBUG - Same Relation: ['Divine Smite_Undead'].
+Database - DEBUG - Same Relation: ['Divine Smite_Fiend'].
+Database - DEBUG - Same Relation: ['Turn the Unholy_Fiend'].
+Database - DEBUG - Same Relation: ['Turn the Unholy_Undead'].
+Database - DEBUG - Same Relation: ['Turn the Faithless_Fiend'].
+Database - DEBUG - Same Relation: ['Paladin_Chain mail'].
+Database - DEBUG - Same Relation: ['Paladin_Holy symbol'].
+Database - DEBUG - Same Relation: ["Paladin_Priest's pack"].
+Database - DEBUG - Same Relation: ["Paladin_Explorer's pack"].
+Database - DEBUG - Same Relation: ['Paladin_Javelin'].
+Database - DEBUG - Same Relation: ['Paladin_Martial weapon'].
+Database - DEBUG - Same Relation: ['Paladin_Shield'].
+Database - DEBUG - Same Relation: ['Paladin_Torm'].
+Database - DEBUG - Same Relation: ['Paladin_Tyr'].
+Database - DEBUG - Same Relation: ['Paladin_Heironeous'].
+Database - DEBUG - Same Relation: ['Paladin_Paladine'].
+Database - DEBUG - Same Relation: ['Paladin_Kiri-Jolith'].
+Database - DEBUG - Same Relation: ['Paladin_Dol Arrah'].
+Database - DEBUG - Same Relation: ['Paladin_Silver Flame'].
+Database - DEBUG - Same Relation: ['Paladin_Bahamut'].
+Database - DEBUG - Same Relation: ['Paladin_Re-Horakhty'].
+Database - DEBUG - Same Relation: ['Paladin_Heimdall'].
+Database - DEBUG - Same Relation: ["Oathbreaker_Dungeon Master's Guide"].
+Database - DEBUG - Same Relation: ['Sacred oath_Oath of Devotion'].
+Database - DEBUG - Same Relation: ['Sacred oath_Oath of the Ancients'].
+Database - DEBUG - Same Relation: ['Sacred oath_Oath of Vengeance'].
+Database - DEBUG - Same Relation: ['Fighting Style_Defense'].
+Database - DEBUG - Same Relation: ['Fighting Style_Dueling'].
+Database - DEBUG - Same Relation: ['Fighting Style_Great Weapon Fighting'].
+Database - DEBUG - Same Relation: ['Fighting Style_Protection'].
+Database - DEBUG - Same Relation: ['Paladin_Hit Dice'].
+Database - DEBUG - Same Relation: ['Paladin_Noble'].
+Database - DEBUG - Trans Entity:paladin to Similar Entity:Paladin.
+Database - DEBUG - Trans Entity:human to Similar Entity:Human.
+Database - DEBUG - Trans Entity:dwarf to Similar Entity:dwarf.
+Database - DEBUG - Trans Entity:elf to Similar Entity:elf.
+Database - DEBUG - Trans Entity:orc to Similar Entity:Orc.
+Database - DEBUG - Trans Entity:giant to Similar Entity:Giant.
+Database - DEBUG - Trans Entity:plate armor to Similar Entity:Plate armor.
+Database - DEBUG - Trans Entity:sword to Similar Entity:Sword.
+Database - DEBUG - Trans Entity:shield to Similar Entity:Shield.
+Database - DEBUG - Trans Entity:divine energy to Similar Entity:Divine energy.
+Database - DEBUG - Trans Entity:savior to Similar Entity:savior.
+Database - DEBUG - Trans Entity:night to Similar Entity:night.
+Database - DEBUG - Trans Entity:rock outcropping to Similar Entity:rock outcropping.
+Database - DEBUG - Trans Entity:victory to Similar Entity:victory.
+Database - DEBUG - Trans Entity:divine oath to Similar Entity:divine oath.
+Database - DEBUG - Trans Entity:silver hair to Similar Entity:silver hair.
+Database - DEBUG - Trans Entity:spear to Similar Entity:spear.
+Database - DEBUG - Trans Entity:holy light to Similar Entity:Holy light.
+Database - DEBUG - Trans Entity:priest to Similar Entity:Priest.
+Database - DEBUG - Trans Entity:altar to Similar Entity:Altar.
+Database - DEBUG - Trans Entity:forest sanctuary to Similar Entity:Forest sanctuary.
+Database - DEBUG - Trans Entity:spirit of nature to Similar Entity:Spirits of nature.
+Database - DEBUG - Trans Entity:dead to Similar Entity:dead.
+Database - DEBUG - Trans Entity:warrior to Similar Entity:warrior.
+Database - DEBUG - Trans Entity:champion to Similar Entity:champion.
+Database - DEBUG - Trans Entity:Cause of Righteousness to Similar Entity:Righteousness.
+Database - DEBUG - Trans Entity:justice to Similar Entity:Justice.
+Database - DEBUG - Trans Entity:righteousness to Similar Entity:Righteousness.
+Database - DEBUG - Trans Entity:good to Similar Entity:Good.
+Database - DEBUG - Trans Entity:darkness to Similar Entity:Darkness.
+Database - DEBUG - Trans Entity:evil to Similar Entity:evil.
+Database - DEBUG - Trans Entity:Sacred Oath to Similar Entity:Sacred oath.
+Database - DEBUG - Trans Entity:deity to Similar Entity:Deity.
+Database - DEBUG - Trans Entity:divine magic to Similar Entity:Divine magic.
+Database - DEBUG - Trans Entity:martial skill to Similar Entity:martial skills.
+Database - DEBUG - Trans Entity:armor to Similar Entity:Armor.
+Database - DEBUG - Trans Entity:adventure to Similar Entity:Adventure.
+Database - DEBUG - Trans Entity:mundane world to Similar Entity:Mundane World.
+Database - DEBUG - Trans Entity:soldier to Similar Entity:Soldier.
+Database - DEBUG - Trans Entity:militia to Similar Entity:Militia.
+Database - DEBUG - Trans Entity:kingdom to Similar Entity:kingdom.
+Database - DEBUG - Trans Entity:king to Similar Entity:King.
+Database - DEBUG - Trans Entity:country to Similar Entity:Country.
+Database - DEBUG - Trans Entity:Divine Sense to Similar Entity:Divine Sense.
+Database - DEBUG - Trans Entity:Lay on Hands to Similar Entity:Lay on Hands.
+Database - DEBUG - Trans Entity:Divine Smite to Similar Entity:Divine Smite.
+Database - DEBUG - Trans Entity:Fighting Style to Similar Entity:Fighting Style.
+Database - DEBUG - Trans Entity:Spellcasting to Similar Entity:Spellcasting.
+Database - DEBUG - Trans Entity:Divine Health to Similar Entity:Divine Health.
+Database - DEBUG - Trans Entity:Ability Score Improvement to Similar Entity:Ability Score Improvement.
+Database - DEBUG - Trans Entity:Extra Attack to Similar Entity:Extra Attack.
+Database - DEBUG - Trans Entity:Aura of Protection to Similar Entity:Aura of Protection.
+Database - DEBUG - Trans Entity:Aura of Courage to Similar Entity:Aura of Courage.
+Database - DEBUG - Trans Entity:Improved Divine Smite to Similar Entity:Improved Divine Smite.
+Database - DEBUG - Trans Entity:Cleansing Touch to Similar Entity:Cleansing Touch.
+Database - DEBUG - Trans Entity:Oath of Devotion to Similar Entity:Oath of Devotion.
+Database - DEBUG - Trans Entity:Oath of the Ancients to Similar Entity:Oath of the Ancients.
+Database - DEBUG - Trans Entity:Oath of Vengeance to Similar Entity:Oath of Vengeance.
+Database - DEBUG - Trans Entity:Channel Divinity to Similar Entity:Channel Divinity.
+Database - DEBUG - Trans Entity:Oath Spells to Similar Entity:Oath Spells.
+Database - DEBUG - Trans Entity:Tenets of Devotion to Similar Entity:Tenets of Devotion.
+Database - DEBUG - Trans Entity:Tenets of the Ancients to Similar Entity:Tenets of the Ancients.
+Database - DEBUG - Trans Entity:Tenets of Vengeance to Similar Entity:Tenets of Vengeance.
+Database - DEBUG - Trans Entity:Holy Nimbus to Similar Entity:Holy Nimbus.
+Database - DEBUG - Trans Entity:Nature's Wrath to Similar Entity:Nature's Wrath.
+Database - DEBUG - Trans Entity:Turn the Faithless to Similar Entity:Turn the Faithless.
+Database - DEBUG - Trans Entity:Aura of Warding to Similar Entity:Aura of Warding.
+Database - DEBUG - Trans Entity:Undying Sentinel to Similar Entity:Undying Sentinel.
+Database - DEBUG - Trans Entity:Elder Champion to Similar Entity:Elder Champion.
+Database - DEBUG - Trans Entity:Abjure Enemy to Similar Entity:Abjure Enemy.
+Database - DEBUG - Trans Entity:Vow of Enmity to Similar Entity:Vow of Enmity.
+Database - DEBUG - Trans Entity:Relentless Avenger to Similar Entity:Relentless Avenger.
+Database - DEBUG - Trans Entity:Soul of Vengeance to Similar Entity:Soul of Vengeance.
+Database - DEBUG - Trans Entity:Avenging Angel to Similar Entity:Avenging Angel.
+Database - DEBUG - Trans Entity:holy symbol to Similar Entity:Holy symbol.
+Database - DEBUG - Trans Entity:spellcasting focus to Similar Entity:Spellcasting focus.
+Database - DEBUG - Trans Entity:hit points to Similar Entity:Hit Points.
+Database - DEBUG - Trans Entity:proficiency to Similar Entity:Proficiencies.
+Database - DEBUG - Trans Entity:saving throw to Similar Entity:Saving throw.
+Database - DEBUG - Trans Entity:Wisdom to Similar Entity:Wisdom.
+Database - DEBUG - Trans Entity:Charisma to Similar Entity:Charisma.
+Database - DEBUG - Trans Entity:Athletics to Similar Entity:Athletics.
+Database - DEBUG - Trans Entity:Insight to Similar Entity:Insight.
+Database - DEBUG - Trans Entity:Intimidation to Similar Entity:Intimidation.
+Database - DEBUG - Trans Entity:Medicine to Similar Entity:Medicine.
+Database - DEBUG - Trans Entity:Persuasion to Similar Entity:Persuasion.
+Database - DEBUG - Trans Entity:Religion to Similar Entity:Religion.
+Database - DEBUG - Trans Entity:equipment to Similar Entity:Equipment.
+Database - DEBUG - Trans Entity:chain mail to Similar Entity:Chain mail.
+Database - DEBUG - Trans Entity:priest's pack to Similar Entity:Priest's pack.
+Database - DEBUG - Trans Entity:explorer's pack to Similar Entity:Explorer's pack.
+Database - DEBUG - Trans Entity:spell slot to Similar Entity:Spell slot.
+Database - DEBUG - Trans Entity:spell save DC to Similar Entity:Spell save DC.
+Database - DEBUG - Trans Entity:spell attack modifier to Similar Entity:Spell attack modifier.
+Database - DEBUG - Trans Entity:Torm to Similar Entity:Torm.
+Database - DEBUG - Trans Entity:Tyr to Similar Entity:Tyr.
+Database - DEBUG - Trans Entity:Heironeous to Similar Entity:Heironeous.
+Database - DEBUG - Trans Entity:Paladine to Similar Entity:Paladine.
+Database - DEBUG - Trans Entity:Kiri-Jolith to Similar Entity:Kiri-Jolith.
+Database - DEBUG - Trans Entity:Dol Arrah to Similar Entity:Dol Arrah.
+Database - DEBUG - Trans Entity:Silver Flame to Similar Entity:Silver Flame.
+Database - DEBUG - Trans Entity:Bahamut to Similar Entity:Bahamut.
+Database - DEBUG - Trans Entity:Athena to Similar Entity:Athena.
+Database - DEBUG - Trans Entity:Re-Horakhty to Similar Entity:Re-Horakhty.
+Database - DEBUG - Trans Entity:Heimdall to Similar Entity:Heimdall.
+Database - DEBUG - Trans Entity:Oathbreaker to Similar Entity:Oathbreaker.
+Database - DEBUG - Trans Entity:Dungeon Master's Guide to Similar Entity:Dungeon Master's Guide.
+Database - DEBUG - Same Relation: ['Human_Sword'].
+Database - DEBUG - Same Relation: ['Human_Shield'].
+Database - DEBUG - Same Relation: ['Human_Divine energy'].
+Database - DEBUG - Same Relation: ['dwarf_rock outcropping'].
+Database - DEBUG - Same Relation: ['dwarf_divine oath'].
+Database - DEBUG - Same Relation: ['dwarf_Orc'].
+Database - DEBUG - Same Relation: ['elf_silver hair'].
+Database - DEBUG - Same Relation: ['elf_Giant'].
+Database - DEBUG - Same Relation: ['Holy light_Darkness'].
+Database - DEBUG - Same Relation: ['Paladin_Sacred oath'].
+Database - DEBUG - Same Relation: ['Paladin_Altar'].
+Database - DEBUG - Same Relation: ['Paladin_Priest'].
+Database - DEBUG - Same Relation: ['Paladin_Forest sanctuary'].
+Database - DEBUG - Same Relation: ['Paladin_Spirits of nature'].
+Database - DEBUG - Same Relation: ['Paladin_Justice'].
+Database - DEBUG - Same Relation: ['Paladin_Righteousness'].
+Database - DEBUG - Same Relation: ['Paladin_evil'].
+Database - DEBUG - Same Relation: ['Paladin_Righteousness'].
+Database - DEBUG - Same Relation: ['Paladin_Sacred oath'].
+Database - DEBUG - Same Relation: ['Paladin_Deity'].
+Database - DEBUG - Same Relation: ['Paladin_Justice'].
+Database - DEBUG - Same Relation: ['Paladin_martial skills'].
+Database - DEBUG - Same Relation: ['Paladin_Armor'].
+Database - DEBUG - Same Relation: ['Paladin_Divine magic'].
+Database - DEBUG - Same Relation: ['Paladin_evil'].
+Database - DEBUG - Same Relation: ['Paladin_Militia'].
+Database - DEBUG - Same Relation: ['Paladin_kingdom'].
+Database - DEBUG - Same Relation: ['Paladin_King'].
+Database - DEBUG - Same Relation: ['Paladin_Country'].
+Database - DEBUG - Same Relation: ['Paladin_Adventure'].
+Database - DEBUG - Same Relation: ['Paladin_Divine Sense'].
+Database - DEBUG - Same Relation: ['Paladin_Lay on Hands'].
+Database - DEBUG - Same Relation: ['Paladin_Divine Smite'].
+Database - DEBUG - Same Relation: ['Paladin_Fighting Style'].
+Database - DEBUG - Same Relation: ['Paladin_Spellcasting'].
+Database - DEBUG - Same Relation: ['Paladin_Divine Health'].
+Database - DEBUG - Same Relation: ['Paladin_Ability Score Improvement'].
+Database - DEBUG - Same Relation: ['Paladin_Extra Attack'].
+Database - DEBUG - Same Relation: ['Paladin_Aura of Protection'].
+Database - DEBUG - Same Relation: ['Paladin_Aura of Courage'].
+Database - DEBUG - Same Relation: ['Paladin_Improved Divine Smite'].
+Database - DEBUG - Same Relation: ['Paladin_Cleansing Touch'].
+Database - DEBUG - Same Relation: ['Oath of Devotion_Tenets of Devotion'].
+Database - DEBUG - Same Relation: ['Oath of Devotion_Holy Nimbus'].
+Database - DEBUG - Same Relation: ['Oath of Devotion_Oath Spells'].
+Database - DEBUG - Same Relation: ['Oath of the Ancients_Tenets of the Ancients'].
+Database - DEBUG - Same Relation: ["Oath of the Ancients_Nature's Wrath"].
+Database - DEBUG - Same Relation: ['Oath of the Ancients_Turn the Faithless'].
+Database - DEBUG - Same Relation: ['Oath of the Ancients_Aura of Warding'].
+Database - DEBUG - Same Relation: ['Oath of the Ancients_Undying Sentinel'].
+Database - DEBUG - Same Relation: ['Oath of the Ancients_Elder Champion'].
+Database - DEBUG - Same Relation: ['Oath of Vengeance_Tenets of Vengeance'].
+Database - DEBUG - Same Relation: ['Oath of Vengeance_Abjure Enemy'].
+Database - DEBUG - Same Relation: ['Oath of Vengeance_Vow of Enmity'].
+Database - DEBUG - Same Relation: ['Oath of Vengeance_Relentless Avenger'].
+Database - DEBUG - Same Relation: ['Oath of Vengeance_Soul of Vengeance'].
+Database - DEBUG - Same Relation: ['Oath of Vengeance_Avenging Angel'].
+Database - DEBUG - Same Relation: ['Paladin_Holy symbol'].
+Database - DEBUG - Same Relation: ['Holy symbol_Spellcasting focus'].
+Database - DEBUG - Same Relation: ['Paladin_Hit Points'].
+Database - DEBUG - Same Relation: ['Paladin_Wisdom'].
+Database - DEBUG - Same Relation: ['Paladin_Charisma'].
+Database - DEBUG - Same Relation: ['Paladin_Athletics'].
+Database - DEBUG - Same Relation: ['Paladin_Insight'].
+Database - DEBUG - Same Relation: ['Paladin_Intimidation'].
+Database - DEBUG - Same Relation: ['Paladin_Medicine'].
+Database - DEBUG - Same Relation: ['Paladin_Persuasion'].
+Database - DEBUG - Same Relation: ['Paladin_Religion'].
+Database - DEBUG - Same Relation: ['Paladin_Chain mail'].
+Database - DEBUG - Same Relation: ["Paladin_Priest's pack"].
+Database - DEBUG - Same Relation: ["Paladin_Explorer's pack"].
+Database - DEBUG - Same Relation: ['Paladin_Holy symbol'].
+Database - DEBUG - Same Relation: ['Paladin_Spell slot'].
+Database - DEBUG - Same Relation: ['Paladin_Spell save DC'].
+Database - DEBUG - Same Relation: ['Paladin_Spell attack modifier'].
+Database - DEBUG - Same Relation: ['Paladin_Torm'].
+Database - DEBUG - Same Relation: ['Paladin_Tyr'].
+Database - DEBUG - Same Relation: ['Paladin_Heironeous'].
+Database - DEBUG - Same Relation: ['Paladin_Paladine'].
+Database - DEBUG - Same Relation: ['Paladin_Kiri-Jolith'].
+Database - DEBUG - Same Relation: ['Paladin_Dol Arrah'].
+Database - DEBUG - Same Relation: ['Paladin_Silver Flame'].
+Database - DEBUG - Same Relation: ['Paladin_Bahamut'].
+Database - DEBUG - Same Relation: ['Paladin_Athena'].
+Database - DEBUG - Same Relation: ['Paladin_Re-Horakhty'].
+Database - DEBUG - Same Relation: ['Paladin_Heimdall'].
+Database - DEBUG - Same Relation: ["Oathbreaker_Dungeon Master's Guide"].
+Database - DEBUG - Same Relation: ['Paladin_Charisma'].
+PreProcessing - INFO - ---------------------------------------------------------------------------------------------------------
+PreProcessing - INFO - Start Query Process...
+PreProcessing - INFO - Force do Rag Seach
+PreProcessing - INFO - Origin Query: What does a level 20 paladin gain?
+PathFinder - INFO - Start PathFinder Process...
+PathFinder - INFO - Get Query: What does a level 20 paladin gain?
+PathFinder - DEBUG - Initial Entity: ['Paladin', 'paladin class table']
+Database - DEBUG - Start Quick Query: What does a level 20 paladin gain? in Entity: Paladin
+Database - DEBUG - Start Quick Query: What does a level 20 paladin gain? in Entity: paladin class table
+PathFinder - INFO - Quick Search Results --- entity:3, chunk:1, edge:2.
+PathFinder - DEBUG - Quick Search Entity List:
+['Paladin', 'paladin class table', 'anchor-1']
+PathFinder - DEBUG - Quick Search Chunk List:
+['1']
+PathFinder - DEBUG - Quick Search Edge List:
+['from entity:Paladin to entity:anchor-1 with relations: relation of entity:Paladin to entity:anchor-1', 'from entity:anchor-1 to chunk:1']
+PathFinder - DEBUG - Chunk Summary:
+{'chunk:1': 'Based on the provided text, a level 20 paladin gains the following:\n\n- A **Sacred Oath Feature** (the capstone ability of the chosen oath):\n  - **Oath of Devotion**: Holy Nimbus (action to emanate a 30‑foot radius of sunlight for 1 minute; hostile creatures in bright light take 10 radiant damage at start of turn; advantage on saving throws against spells from fiends and undead; requires a long rest to reuse).\n  - **Oath of the Ancients**: Elder Champion (action to transform for 1 minute; regain 10 hit points at start of each turn; cast paladin spells with a casting time of 1 action as a bonus action; enemies within 10 feet have disadvantage on saves against your paladin spells and Channel Divinity options; requires a long rest to reuse).\n  - **Oath of Vengeance**: Avenging Angel (action to transform for 1 hour; gain flying speed of 60 feet; emanate a 30‑foot aura of menace that frightens enemies entering or starting turn there; attack rolls against frightened creatures have advantage; requires a long rest to reuse).\n- **Spell slots**: 4 first‑level, 3 second‑level, 3 third‑level, 3 fourth‑level, 2 fifth‑level.\n- **Proficiency bonus**: +6.'}
+PathFinder - DEBUG - Function judge_sufficient_information Output:
+The provided chunk summary explicitly lists the gains for a level 20 paladin, including sacred oath features for three oaths, spell slots, and proficiency bonus. The graph edges connect the entity "Paladin" to the chunk containing this information, so no missing intermediate data. The summary directly answers the query without contradictions or gaps, making the information sufficient.
+
+```cot-ans
+yes
+```
+PathFinder - INFO - Data Enough? True
+PathFinder - INFO - Stop Search --- Jumps: 0
+PathFinder - INFO - No LLM-Guided Traversal, Skip Update.
+PathFinder - DEBUG - Start Node: ['Paladin', 'paladin class table']
+PathFinder - DEBUG - Entities : ['Paladin', 'paladin class table', 'anchor-1']
+PathFinder - DEBUG - Chunks : ['1']
+PathFinder - DEBUG - Paths:
+[{'from': 'Paladin', 'to': 'anchor-1', 'id': 'Paladin_anchor-1', 'documents': 'relation of entity:Paladin to entity:anchor-1', 'type': 'relation'}, {'from': 'anchor-1', 'to': '1', 'id': 'anchor-1_1', 'type': 'connection'}]
+PathFinder - INFO - Skip Update.
+PreProcessing - DEBUG - Get Rag Chunk Summary:
+chunk:1:Based on the provided text, a level 20 paladin gains the following:
+
+- A **Sacred Oath Feature** (the capstone ability of the chosen oath):
+  - **Oath of Devotion**: Holy Nimbus (action to emanate a 30‑foot radius of sunlight for 1 minute; hostile creatures in bright light take 10 radiant damage at start of turn; advantage on saving throws against spells from fiends and undead; requires a long rest to reuse).
+  - **Oath of the Ancients**: Elder Champion (action to transform for 1 minute; regain 10 hit points at start of each turn; cast paladin spells with a casting time of 1 action as a bonus action; enemies within 10 feet have disadvantage on saves against your paladin spells and Channel Divinity options; requires a long rest to reuse).
+  - **Oath of Vengeance**: Avenging Angel (action to transform for 1 hour; gain flying speed of 60 feet; emanate a 30‑foot aura of menace that frightens enemies entering or starting turn there; attack rolls against frightened creatures have advantage; requires a long rest to reuse).
+- **Spell slots**: 4 first‑level, 3 second‑level, 3 third‑level, 3 fourth‑level, 2 fifth‑level.
+- **Proficiency bonus**: +6.
+
+PreProcessing - DEBUG - Get Rag Edges:
+['from entity:Paladin to entity:anchor-1 with relations: relation of entity:Paladin to entity:anchor-1', 'from entity:anchor-1 to chunk:1']
+PreProcessing - INFO - Origin Query: What does a level 20 paladin gain?
+PreProcessing - INFO - Response:
+A level 20 paladin gains:
+- A Sacred Oath Feature (capstone): Oath of Devotion (Holy Nimbus), Oath of the Ancients (Elder Champion), or Oath of Vengeance (Avenging Angel).
+- Spell slots: 4/3/3/3/2 (first to fifth level).
+- Proficiency bonus: +6.
+(Source: chunk:1)
+PreProcessing - INFO - End PreProcessing Process.
