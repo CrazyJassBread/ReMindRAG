@@ -12,7 +12,7 @@ import logging
 
 class PathFinder():
     def __init__(self, agent:AgentBase, database:ChromaDBManager, chunk_summary_threshold, logger_level, log_path):
-        self.max_retries = 3
+        self.max_retries = 10
 
         self.agent = agent
         self.database = database

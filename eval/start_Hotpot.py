@@ -16,7 +16,8 @@ def run_title_test(title_index, test_name, model_name, question_type):
     
     print(f"Running command: {' '.join(cmd)}")
     
-    process = subprocess.Popen(cmd, shell=True)
+    # process = subprocess.Popen(cmd, shell=True)
+    process = subprocess.Popen(cmd)
     return process
 
 def main():

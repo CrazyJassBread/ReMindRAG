@@ -8,7 +8,7 @@ import urllib3.exceptions
 import socket
 
 class OpenaiAgent(AgentBase):
-    def __init__(self, base_url: str, api_key: str, llm_model_name: str, time_out: int = 120, max_retries: int = 3, retry_delay: float = 1.0):
+    def __init__(self, base_url: str, api_key: str, llm_model_name: str, time_out: int = 120, max_retries: int = 20, retry_delay: float = 1.0):
         self.base_url = base_url
         self.llm_model_name = llm_model_name
         self.api_key = api_key
@@ -50,6 +50,7 @@ class OpenaiAgent(AgentBase):
                 last_error = e
                 if attempt < self.max_retries:
                     # time.sleep(self.retry_delay * (attempt + 1))
+                    time.sleep(1)
                     continue
                 else:
                     raise Exception(f"Failed after {self.max_retries} retries. Last error: {str(last_error)}") from last_error

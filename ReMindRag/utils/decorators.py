@@ -1,6 +1,7 @@
 import json
 import re
 from functools import wraps
+from time import sleep
 from .prompts import json_rewrite_prompt, check_keys_rewrite_prompt, unpack_ans_rewrite_prompt
 
 def retry_json_parsing(func):
@@ -11,7 +12,7 @@ def retry_json_parsing(func):
     @wraps(func)
     def wrapper(self, *args, **kwargs):
         retries = 0
-        max_retries = 3
+        max_retries = 9
         last_result = None
         
         while retries < max_retries:
@@ -38,6 +39,7 @@ def retry_json_parsing(func):
             except (json.JSONDecodeError, TypeError) as e:
                 retries += 1
                 print(f"JSON parsing failed, retrying... ({retries}/{max_retries})")
+                sleep(1)
                 if last_result:
                     print("Last output:", last_result)
         
@@ -56,7 +58,7 @@ def check_keys(*required_keys):
         @wraps(func)
         def wrapper(*args, **kwargs):
             retries = 0
-            max_retries = 3
+            max_retries = 9
             error_chat_history = kwargs.pop('error_chat_history', [])
             
             while retries < max_retries:
@@ -90,7 +92,7 @@ def check_keys(*required_keys):
                 except (json.JSONDecodeError, TypeError, KeyError) as e:
                     retries += 1
                     print(f"Validation failed, retrying... ({retries}/{max_retries})")
-                    
+                    sleep(1)
                     if retries < max_retries and 'result' in locals():
                         error_chat_history.extend([
                             {"role": "assistant", "content": json.dumps(result)},
@@ -116,7 +118,7 @@ def unpack_cot_ans(func):
     @wraps(func)
     def wrapper(*args, **kwargs):
         retries = 0
-        max_retries = 3
+        max_retries = 9
         error_chat_history = kwargs.pop('error_chat_history', [])
         
         while retries < max_retries:
@@ -137,7 +139,7 @@ def unpack_cot_ans(func):
             except (TypeError, ValueError) as e:
                 retries += 1
                 print(f"Extraction failed, retrying... ({retries}/{max_retries})")
-                
+                sleep(1)
                 if retries < max_retries and 'result' in locals():
                     error_chat_history.extend([
                         {"role": "assistant", "content": result},

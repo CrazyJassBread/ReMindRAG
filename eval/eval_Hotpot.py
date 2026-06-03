@@ -78,8 +78,10 @@ Answer:
     chunker = NaiveChunker("nomic-ai/nomic-embed-text-v2-moe", model_cache, max_token_length=750, context_sentence=0)
     tokenizer = AutoTokenizer.from_pretrained("nomic-ai/nomic-embed-text-v2-moe",cache_dir = model_cache)
 
-    ans_rewrite_agent = OpenaiAgent(base_url, api_key, "gpt-4o-2024-11-20")
-    ans_check_agent = OpenaiAgent(base_url, api_key, "gpt-4o-2024-11-20")
+    # ans_rewrite_agent = OpenaiAgent(base_url, api_key, "gpt-4o-2024-11-20")
+    # ans_check_agent = OpenaiAgent(base_url, api_key, "gpt-4o-2024-11-20")
+    ans_rewrite_agent = OpenaiAgent(base_url, api_key, "mimo-v2.5")
+    ans_check_agent = OpenaiAgent(base_url, api_key, "mimo-v2.5")
 
     timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
     log_path = f"./database/{test_name}/{{title}}/log_{timestamp}.log"
