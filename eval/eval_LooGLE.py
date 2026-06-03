@@ -22,7 +22,7 @@ def main():
     parser.add_argument('--test_name', type=str, default="test", help='Test Name')
     parser.add_argument('--data_type', type=str, choices=["longdep_qa", "shortdep_qa"], help='Data Type: longdep_qa or shortdep_qa')
     parser.add_argument('--question_type', type=str, choices=["origin", "similar"], help='Question Type: origin or similar')
-    parser.add_argument('--model_name', type=str, default="gpt-4o-mini", help='Backbone Model Name')
+    parser.add_argument('--model_name', type=str, default="deepseek-v4-flash", help='Backbone Model Name')
     args = parser.parse_args()
 
     title_index = args.title_index
@@ -80,8 +80,8 @@ Original answer = {generated_answer}
     chunker = NaiveChunker("nomic-ai/nomic-embed-text-v2-moe", model_cache, max_token_length=750)
     tokenizer = AutoTokenizer.from_pretrained("nomic-ai/nomic-embed-text-v2-moe",cache_dir = model_cache)
 
-    ans_rewrite_agent = OpenaiAgent(base_url, api_key, "gpt-4o")
-    ans_check_agent = OpenaiAgent(base_url, api_key, "gpt-4o")
+    ans_rewrite_agent = OpenaiAgent(base_url, api_key, model_name)
+    ans_check_agent = OpenaiAgent(base_url, api_key, model_name)
 
     timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
     log_path = f"./database/{test_name}/{{title}}/log_{timestamp}.log"

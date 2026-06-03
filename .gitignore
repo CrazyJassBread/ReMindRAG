@@ -21,3 +21,10 @@ eval/database/*
 !eval/database/.gitkeep
 
 eval/data_modify/
+
+example/logs/*
+
+
+api_key.json
+.env
+*.key

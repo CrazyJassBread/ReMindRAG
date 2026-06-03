@@ -16,7 +16,7 @@ def run_title_test(title_index, test_name, model_name, question_type):
     
     print(f"Running command: {' '.join(cmd)}")
     
-    process = subprocess.Popen(cmd, shell=True)
+    process = subprocess.Popen(cmd)
     return process
 
 def main():
@@ -26,7 +26,7 @@ def main():
     parser.add_argument('--test_name', type=str, default="test", help='Test name')
     parser.add_argument('--parallel', type=int, default=3, help='Number of parallel tests')
     parser.add_argument('--question_type', type=str, default="origin", choices=["origin", "similar", "different"], help='Question Type: origin, similar or different')
-    parser.add_argument('--model_name', type=str, default="gpt-4o-mini", help='Backbone model name')
+    parser.add_argument('--model_name', type=str, default="deepseek-v4-flash", help='Backbone model name')
     
     args = parser.parse_args()
     

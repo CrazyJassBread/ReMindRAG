@@ -24,8 +24,8 @@ log_path = f"logs/log_{timestamp}.log"
 
 
 # Step 2: Load Base Components
-chunk_agent = OpenaiAgent(base_url, api_key, "gpt-4o-mini")
-generate_agent = OpenaiAgent(base_url, api_key, "gpt-4o-mini")
+chunk_agent = OpenaiAgent(base_url, api_key, "deepseek-v4-flash")
+generate_agent = OpenaiAgent(base_url, api_key, "deepseek-v4-flash")
 embedding = HgEmbedding("nomic-ai/nomic-embed-text-v2-moe", model_cache_dir)
 chunker = NaiveChunker("nomic-ai/nomic-embed-text-v2-moe", model_cache_dir, max_token_length=750)
 tokenizer = AutoTokenizer.from_pretrained("nomic-ai/nomic-embed-text-v2-moe", cache_dir = model_cache_dir)
@@ -56,4 +56,5 @@ print(f"\n\nResponse: {response}")
 
 
 # Step 6: Launch WebUI Backend
-launch_webui(rag_instance)
+# launch_webui(rag_instance)
+launch_webui(rag_instance, host="0.0.0.0", port=5000, debug=False)
