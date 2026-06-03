@@ -1,0 +1,25 @@
+Test name: llm-only-long-nocontext-mimov2.5
+Total correct answers: 88/149
+Overall accuracy: 0.5906
+
+Per-title results:
+Title 0 (José Luis Picardo): 2/6 = 0.3333
+Title 1 (Urban planning of Barcelona): 6/9 = 0.6667
+Title 4 (Claude List): 2/5 = 0.4000
+Title 2 (2023 French pension reform unrest): 7/11 = 0.6364
+Title 3 (2023 Turkey–Syria earthquake): 7/10 = 0.7000
+Title 5 (Climate change in Washington (state)): 4/5 = 0.8000
+Title 8 (Governorship of Glenn Youngkin): 2/5 = 0.4000
+Title 7 (Foreign Cattle Market): 7/9 = 0.7778
+Title 9 (Hells Angels MC criminal allegations and incidents in the United States): 4/8 = 0.5000
+Title 10 (History of NBC): 4/5 = 0.8000
+Title 11 (Light in painting): 4/6 = 0.6667
+Title 13 (Police brutality by country): 3/5 = 0.6000
+Title 12 (Nightlife in Belgrade): 6/8 = 0.7500
+Title 14 (Afghan–Soviet War): 6/8 = 0.7500
+Title 15 (Stowe Gardens): 3/8 = 0.3750
+Title 16 (Street names in Barcelona): 4/6 = 0.6667
+Title 17 (Ted Brimble): 2/10 = 0.2000
+Title 18 (War crimes in the Russian invasion of Ukraine): 7/10 = 0.7000
+Title 19 (57th Medical Detachment): 1/5 = 0.2000
+Title 6 (Execution of Nagaenthran K. Dharmalingam): 7/10 = 0.7000
