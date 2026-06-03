@@ -1,0 +1,9 @@
+Test name: main-simple-mimov2.5
+Report type: final_report
+Data type: shortdep_qa
+Start index: 0
+Number of planned titles: 20
+Completed titles included: 19
+Excluded/missing titles: 1
+Generated time: 20260603_125058
+Note: Title 13 is excluded because it could not be completed due to policy/regulatory issue.
