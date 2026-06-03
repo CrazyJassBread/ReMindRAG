@@ -275,6 +275,10 @@ class PathFinder():
         self.logger.debug(f"Entities : {self.entity}")
         self.logger.debug(f"Chunks : {self.chunk}")
         self.logger.debug(f"Paths:\n{self.path}")
+        if do_update and (not enough):
+            self.logger.info("Skip Update: retrieved information is not sufficient.")
+            do_update = False
+
         if do_update:
             self.logger.info("Update Knowledge Graph.")
 
@@ -287,6 +291,12 @@ class PathFinder():
             self.update_dict["chunks"] = str_chunk_list
 
             self.logger.debug(f"Update Dict: {self.update_dict}")
+
+            if not self.update_dict["chunks"]:
+                self.logger.info("Skip Update: no useful chunk selected as evidence.")
+                do_update = False
+            
+        if do_update:
             
             for entity_iter in range(search_keys):
                 self.viewed_nodes = []
@@ -305,8 +315,8 @@ class PathFinder():
             
             self.database.enhance_edge_weight(self.database_query, final_confirm_paths)
             self.logger.debug(f"Enhance Edges:\n{final_confirm_paths}")
-            self.database.punish_edge_weight(self.database_query, punish_paths)
-            self.logger.debug(f"Punish Edges:\n{punish_paths}")
+            self.logger.info("Skip Punish: conservative memory update mode.")
+            self.logger.debug(f"Skipped Punish Edges:\n{punish_paths}")
         else:
             self.logger.info("Skip Update.")
                 

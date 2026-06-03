@@ -27,6 +27,7 @@ def main():
     parser = argparse.ArgumentParser(description='Auto Run ReMindRAG Test')
     parser.add_argument('--start_index', type=int, default=0, help='Starting title index')
     parser.add_argument('--test_count', type=int, default=20, help='Number of titles to test')
+    parser.add_argument('--title_indices', type=str, default=None, help='Comma-separated title indices to test, e.g. "9,16,6"')
     parser.add_argument('--test_name', type=str, default="test", help='Test name')
     parser.add_argument('--parallel', type=int, default=3, help='Number of parallel tests to run')
     parser.add_argument('--data_type', type=str, choices=["longdep_qa", "shortdep_qa"], help='Data Type: longdep_qa or shortdep_qa')
@@ -38,6 +39,9 @@ def main():
     
     start_index = args.start_index
     test_count = args.test_count
+    title_indices = None
+    if args.title_indices:
+        title_indices = [int(index.strip()) for index in args.title_indices.split(",") if index.strip()]
     test_name = args.test_name
     parallel = args.parallel
     data_type = args.data_type
@@ -50,8 +54,11 @@ def main():
     
     print(f"Starting test execution...")
     print(f"Test name: {test_name}")
-    print(f"Starting index: {start_index}")
-    print(f"Number of tests: {test_count}")
+    if title_indices:
+        print(f"Title indices: {title_indices}")
+    else:
+        print(f"Starting index: {start_index}")
+        print(f"Number of tests: {test_count}")
     print(f"Parallel processes: {parallel}")
     
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -60,23 +67,30 @@ def main():
     
     with open(f"{results_dir}/config.txt", "w") as f:
         f.write(f"Test name: {test_name}\n")
-        f.write(f"Start index: {start_index}\n")
-        f.write(f"Number of tests: {test_count}\n")
+        if title_indices:
+            f.write(f"Title indices: {title_indices}\n")
+        else:
+            f.write(f"Start index: {start_index}\n")
+            f.write(f"Number of tests: {test_count}\n")
         f.write(f"Parallel processes: {parallel}\n")
         f.write(f"Start time: {timestamp}\n")
     
     active_processes = []
     results = []
     
-    end_index = start_index + test_count
-    current_index = start_index
+    if title_indices:
+        pending_indices = title_indices
+    else:
+        pending_indices = list(range(start_index, start_index + test_count))
+    current_position = 0
     
-    while current_index < end_index or active_processes:
-        while current_index < end_index and len(active_processes) < parallel:
-            process = run_title_test(current_index, test_name, data_type, question_type, model_name, judge_model_name)
-            active_processes.append((process, current_index))
-            print(f"Started test for title index {current_index}, PID: {process.pid}")
-            current_index += 1
+    while current_position < len(pending_indices) or active_processes:
+        while current_position < len(pending_indices) and len(active_processes) < parallel:
+            index = pending_indices[current_position]
+            process = run_title_test(index, test_name, data_type, question_type, model_name, judge_model_name)
+            active_processes.append((process, index))
+            print(f"Started test for title index {index}, PID: {process.pid}")
+            current_position += 1
         
         for i in range(len(active_processes) - 1, -1, -1):
             process, index = active_processes[i]
