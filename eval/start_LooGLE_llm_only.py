@@ -4,6 +4,7 @@ import os
 import time
 from datetime import datetime
 import json
+import sys
 
 
 def run_title_test(
@@ -17,7 +18,7 @@ def run_title_test(
     use_context=False,
 ):
     cmd = [
-        "python",
+        sys.executable,
         "eval_LooGLE_llm_only.py",
         "--title_index",
         str(title_index),
