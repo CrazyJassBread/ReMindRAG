@@ -5,6 +5,7 @@ from ..chunking import ChunkerBase
 from .data_extract import handle_file, handle_file_folder, handle_content
 from ..utils.math_functions import edge_weight_coefficient
 from ..utils.logger import setup_logger
+from ..retrieval.adaptive_lambda import compute_adaptive_lambda
 
 
 import chromadb
@@ -27,7 +28,13 @@ class ChromaDBManager:
                  strong_connection_threshold,
                  chromadp_pth,
                  tokenizer:AutoTokenizer,
-                 log_path = None):
+                 log_path = None,
+                 use_adaptive_lambda = False,
+                 lambda_0 = 0.55,
+                 lambda_min = 0.35,
+                 lambda_max = 0.75,
+                 lambda_beta = 0.10,
+                 lambda_gamma = 0.08):
         self.logger = setup_logger("Database", logger_level, log_path)
 
         self.client = chromadb.PersistentClient(path = chromadp_pth)
@@ -46,6 +53,12 @@ class ChromaDBManager:
         self.synonym_threshold = synonym_threshold
         self.edge_weight_alpha = edge_weight_alpha
         self.strong_connection_threshold = strong_connection_threshold
+        self.use_adaptive_lambda = use_adaptive_lambda
+        self.lambda_0 = lambda_0
+        self.lambda_min = lambda_min
+        self.lambda_max = lambda_max
+        self.lambda_beta = lambda_beta
+        self.lambda_gamma = lambda_gamma
 
         self.tokenizer = tokenizer
 
@@ -473,18 +486,62 @@ class ChromaDBManager:
         self.dfs_chunk = []
         self.dfs_edge = []
 
-        self.strong_connection_dfs(query, entity_id)
+        lambda_threshold = self.strong_connection_threshold
+        complexity_q = 0.0
+        sim_q_seed = 0.5
+
+        if self.use_adaptive_lambda:
+            query_embedding = None
+            seed_embedding = None
+            try:
+                query_embedding = self.embedding.sentence_embedding(query)
+                seed_data = self.entity_collection.get(ids=[entity_id], include=["embeddings"])
+                seed_embeddings = seed_data.get("embeddings")
+                if seed_embeddings is not None and len(seed_embeddings) > 0:
+                    seed_embedding = seed_embeddings[0]
+            except Exception as exc:
+                self.logger.warning(f"Adaptive lambda embedding fallback for seed {entity_id}: {exc}")
+
+            adaptive_lambda = compute_adaptive_lambda(
+                query=query,
+                query_embedding=query_embedding,
+                seed_embedding=seed_embedding,
+                lambda_0=self.lambda_0,
+                beta=self.lambda_beta,
+                gamma=self.lambda_gamma,
+                lambda_min=self.lambda_min,
+                lambda_max=self.lambda_max,
+            )
+            lambda_threshold = adaptive_lambda["lambda"]
+            complexity_q = adaptive_lambda["complexity"]
+            sim_q_seed = adaptive_lambda["sim"]
+
+        self.strong_connection_dfs(query, entity_id, lambda_threshold)
+
+        if self.use_adaptive_lambda:
+            subgraph_size = len(set(self.dfs_entity)) + len(set(self.dfs_chunk))
+            query_preview = query.replace("\n", " ")[:80]
+            self.logger.info(
+                f"[AdaptiveLambda] query={query_preview} "
+                f"lambda={lambda_threshold:.4f} "
+                f"complexity={complexity_q:.4f} "
+                f"sim={sim_q_seed:.4f} "
+                f"subgraph_size={subgraph_size}"
+            )
 
         return self.dfs_entity, self.dfs_chunk, self.dfs_edge
 
 
 
         
-    def strong_connection_dfs(self, query, entity_node_id):
+    def strong_connection_dfs(self, query, entity_node_id, lambda_threshold = None):
         self.logger.trace(f"DFS Step in {entity_node_id}")
+        if lambda_threshold is None:
+            lambda_threshold = self.strong_connection_threshold
+
         relations, connection = self.get_entity_edges(query ,entity_node_id)
         if connection:
-            if connection["weight"] > self.strong_connection_threshold:
+            if connection["weight"] > lambda_threshold:
                 self.dfs_chunk.append(connection["to"])
                 self.dfs_edge.append({"type":"connection","from":connection["from"],"to":connection["to"],"documents":connection["documents"],"id":connection["id"]})
         
@@ -492,10 +549,10 @@ class ChromaDBManager:
             for relation in relations:
                 if relation["to"] in self.dfs_entity:
                         continue
-                if relation["weight"] > self.strong_connection_threshold:
+                if relation["weight"] > lambda_threshold:
                     self.dfs_entity.append(relation["to"])
                     self.dfs_edge.append({"type":"relation","from":relation["from"],"to":relation["to"],"documents":relation["documents"],"id":relation["id"]})
-                    self.strong_connection_dfs(query, relation["to"])
+                    self.strong_connection_dfs(query, relation["to"], lambda_threshold)
                     
         
 

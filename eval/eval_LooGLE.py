@@ -23,6 +23,12 @@ def main():
     parser.add_argument('--data_type', type=str, choices=["longdep_qa", "shortdep_qa"], help='Data Type: longdep_qa or shortdep_qa')
     parser.add_argument('--question_type', type=str, choices=["origin", "similar"], help='Question Type: origin or similar')
     parser.add_argument('--model_name', type=str, default="gpt-4o-mini", help='Backbone Model Name')
+    parser.add_argument('--use_adaptive_lambda', action='store_true', help='Enable query-adaptive memory replay threshold')
+    parser.add_argument('--lambda_0', type=float, default=0.55, help='Base lambda for adaptive threshold')
+    parser.add_argument('--lambda_min', type=float, default=0.35, help='Minimum adaptive lambda')
+    parser.add_argument('--lambda_max', type=float, default=0.75, help='Maximum adaptive lambda')
+    parser.add_argument('--lambda_beta', type=float, default=0.10, help='Weight for query-seed similarity')
+    parser.add_argument('--lambda_gamma', type=float, default=0.08, help='Weight for query complexity')
     args = parser.parse_args()
 
     title_index = args.title_index
@@ -132,7 +138,13 @@ Original answer = {generated_answer}
         database_description = f"Database title: {title}.",
         save_dir = f"database/{test_name}/{title_index}",
         edge_weight_coefficient = 0.1,
-        strong_connection_threshold = 0.5
+        strong_connection_threshold = 0.5,
+        use_adaptive_lambda = args.use_adaptive_lambda,
+        lambda_0 = args.lambda_0,
+        lambda_min = args.lambda_min,
+        lambda_max = args.lambda_max,
+        lambda_beta = args.lambda_beta,
+        lambda_gamma = args.lambda_gamma
     )
 
     if not need_load_data:

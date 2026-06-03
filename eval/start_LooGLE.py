@@ -5,7 +5,7 @@ import time
 from datetime import datetime
 import json
 
-def run_title_test(title_index, test_name, data_type, question_type, model_name):
+def run_title_test(title_index, test_name, data_type, question_type, model_name, args):
     cmd = [ "python", "eval_LooGLE.py", 
             "--title_index", str(title_index), 
             "--test_name", test_name,
@@ -13,6 +13,15 @@ def run_title_test(title_index, test_name, data_type, question_type, model_name)
             "--question_type", question_type,
             "--model_name", model_name
         ]
+    if args.use_adaptive_lambda:
+        cmd.append("--use_adaptive_lambda")
+    cmd.extend([
+        "--lambda_0", str(args.lambda_0),
+        "--lambda_min", str(args.lambda_min),
+        "--lambda_max", str(args.lambda_max),
+        "--lambda_beta", str(args.lambda_beta),
+        "--lambda_gamma", str(args.lambda_gamma),
+    ])
     
     print(f"Run Command: {' '.join(cmd)}")
     
@@ -29,6 +38,12 @@ def main():
     parser.add_argument('--data_type', type=str, choices=["longdep_qa", "shortdep_qa"], help='Data Type: longdep_qa or shortdep_qa')
     parser.add_argument('--question_type', type=str, default="origin", choices=["origin", "similar"], help='Question Type: origin or similar')
     parser.add_argument('--model_name', type=str, default="gpt-4o-mini", help='Backbone Model Name')
+    parser.add_argument('--use_adaptive_lambda', action='store_true', help='Enable query-adaptive memory replay threshold')
+    parser.add_argument('--lambda_0', type=float, default=0.55, help='Base lambda for adaptive threshold')
+    parser.add_argument('--lambda_min', type=float, default=0.35, help='Minimum adaptive lambda')
+    parser.add_argument('--lambda_max', type=float, default=0.75, help='Maximum adaptive lambda')
+    parser.add_argument('--lambda_beta', type=float, default=0.10, help='Weight for query-seed similarity')
+    parser.add_argument('--lambda_gamma', type=float, default=0.08, help='Weight for query complexity')
     
     args = parser.parse_args()
     
@@ -58,6 +73,12 @@ def main():
         f.write(f"Start index: {start_index}\n")
         f.write(f"Number of tests: {test_count}\n")
         f.write(f"Parallel processes: {parallel}\n")
+        f.write(f"Use adaptive lambda: {args.use_adaptive_lambda}\n")
+        f.write(f"Lambda 0: {args.lambda_0}\n")
+        f.write(f"Lambda min: {args.lambda_min}\n")
+        f.write(f"Lambda max: {args.lambda_max}\n")
+        f.write(f"Lambda beta: {args.lambda_beta}\n")
+        f.write(f"Lambda gamma: {args.lambda_gamma}\n")
         f.write(f"Start time: {timestamp}\n")
     
     active_processes = []
@@ -68,7 +89,7 @@ def main():
     
     while current_index < end_index or active_processes:
         while current_index < end_index and len(active_processes) < parallel:
-            process = run_title_test(current_index, test_name, data_type, question_type, model_name)
+            process = run_title_test(current_index, test_name, data_type, question_type, model_name, args)
             active_processes.append((process, current_index))
             print(f"Started test for title index {current_index}, PID: {process.pid}")
             current_index += 1

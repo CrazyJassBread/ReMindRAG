@@ -24,6 +24,12 @@ def main():
     parser.add_argument('--test_name', type=str, default="test", help='Test Name')
     parser.add_argument('--question_type', type=str, choices=["origin", "similar", "different"], help='Question Type: origin, similar or different')
     parser.add_argument('--model_name', type=str, default="gpt-4o-mini", help='Backbone Model Name')
+    parser.add_argument('--use_adaptive_lambda', action='store_true', help='Enable query-adaptive memory replay threshold')
+    parser.add_argument('--lambda_0', type=float, default=0.55, help='Base lambda for adaptive threshold')
+    parser.add_argument('--lambda_min', type=float, default=0.35, help='Minimum adaptive lambda')
+    parser.add_argument('--lambda_max', type=float, default=0.75, help='Maximum adaptive lambda')
+    parser.add_argument('--lambda_beta', type=float, default=0.10, help='Weight for query-seed similarity')
+    parser.add_argument('--lambda_gamma', type=float, default=0.08, help='Weight for query complexity')
     args = parser.parse_args()
 
     title_index = args.title_index
@@ -131,7 +137,13 @@ Answer:
         database_description = f"Database title: wiki",
         save_dir=f"database/{test_name}/{title_index}",
         edge_weight_coefficient=0.1,
-        strong_connection_threshold=0.5
+        strong_connection_threshold=0.5,
+        use_adaptive_lambda=args.use_adaptive_lambda,
+        lambda_0=args.lambda_0,
+        lambda_min=args.lambda_min,
+        lambda_max=args.lambda_max,
+        lambda_beta=args.lambda_beta,
+        lambda_gamma=args.lambda_gamma
         
     )
 

@@ -6,13 +6,22 @@ from datetime import datetime
 import json
 
 
-def run_title_test(title_index, test_name, model_name, question_type):
+def run_title_test(title_index, test_name, model_name, question_type, args):
     cmd = [ "python", "eval_Hotpot.py", 
             "--title_index", str(title_index), 
             "--test_name", test_name,
             "--model_name", model_name,
             "--question_type", question_type
             ]
+    if args.use_adaptive_lambda:
+        cmd.append("--use_adaptive_lambda")
+    cmd.extend([
+        "--lambda_0", str(args.lambda_0),
+        "--lambda_min", str(args.lambda_min),
+        "--lambda_max", str(args.lambda_max),
+        "--lambda_beta", str(args.lambda_beta),
+        "--lambda_gamma", str(args.lambda_gamma),
+    ])
     
     print(f"Running command: {' '.join(cmd)}")
     
@@ -28,6 +37,12 @@ def main():
     parser.add_argument('--parallel', type=int, default=3, help='Number of parallel tests')
     parser.add_argument('--question_type', type=str, default="origin", choices=["origin", "similar", "different"], help='Question Type: origin, similar or different')
     parser.add_argument('--model_name', type=str, default="gpt-4o-mini", help='Backbone model name')
+    parser.add_argument('--use_adaptive_lambda', action='store_true', help='Enable query-adaptive memory replay threshold')
+    parser.add_argument('--lambda_0', type=float, default=0.55, help='Base lambda for adaptive threshold')
+    parser.add_argument('--lambda_min', type=float, default=0.35, help='Minimum adaptive lambda')
+    parser.add_argument('--lambda_max', type=float, default=0.75, help='Maximum adaptive lambda')
+    parser.add_argument('--lambda_beta', type=float, default=0.10, help='Weight for query-seed similarity')
+    parser.add_argument('--lambda_gamma', type=float, default=0.08, help='Weight for query complexity')
     
     args = parser.parse_args()
     
@@ -56,6 +71,12 @@ def main():
         f.write(f"Start index: {start_index}\n")
         f.write(f"Number of tests: {test_count}\n")
         f.write(f"Parallel tests: {parallel}\n")
+        f.write(f"Use adaptive lambda: {args.use_adaptive_lambda}\n")
+        f.write(f"Lambda 0: {args.lambda_0}\n")
+        f.write(f"Lambda min: {args.lambda_min}\n")
+        f.write(f"Lambda max: {args.lambda_max}\n")
+        f.write(f"Lambda beta: {args.lambda_beta}\n")
+        f.write(f"Lambda gamma: {args.lambda_gamma}\n")
         f.write(f"Start time: {timestamp}\n")
     
     active_processes = []
@@ -73,7 +94,7 @@ def main():
                 current_index += 1
                 continue
 
-            process = run_title_test(current_index, test_name, model_name, question_type)
+            process = run_title_test(current_index, test_name, model_name, question_type, args)
             active_processes.append((process, current_index))
             print(f"Started test for title index {current_index}, PID: {process.pid}")
             current_index += 1

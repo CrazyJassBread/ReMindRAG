@@ -61,6 +61,12 @@ In the `example` folder, we provide a demo. Use the following command to run thi
 |--------------------------------|--------|------------------|-------------|
 | `edge_weight_coefficient` | Float | 0.1              | Adjusts system's reliance on edge embedding for strong links (range 0.1-0.2) |
 | `strong_connection_threshold` | Float | 0.55           | Below 0.775 theoretically; practical range 0.5-0.75 balances retrieval cost and memory capacity |
+| `use_adaptive_lambda` | Bool | False           | Enables query-adaptive memory replay threshold when set to True |
+| `lambda_0` | Float | 0.55           | Base threshold for adaptive lambda |
+| `lambda_min` | Float | 0.35           | Lower bound for adaptive lambda |
+| `lambda_max` | Float | 0.75           | Upper bound for adaptive lambda |
+| `lambda_beta` | Float | 0.10           | Weight for query-seed similarity in adaptive lambda |
+| `lambda_gamma` | Float | 0.08           | Weight for query complexity in adaptive lambda |
 | `synonym_threshold` | Float | 0.7             | Merges entities when embedding similarity exceeds this value |
 | `database_description` | Str | None           | A brief one-sentence description of your data |  
 | `save_dir` | Str | None           | Your data storage path |  

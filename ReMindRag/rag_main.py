@@ -27,6 +27,12 @@ class ReMindRag:
                 synonym_threshold = 0.7, 
                 edge_weight_coefficient = 0.1, 
                 strong_connection_threshold = 0.55,
+                use_adaptive_lambda = False,
+                lambda_0 = 0.55,
+                lambda_min = 0.35,
+                lambda_max = 0.75,
+                lambda_beta = 0.10,
+                lambda_gamma = 0.08,
                 
                 save_dir:str = './Rag_Cache', 
                 log_path = None
@@ -58,6 +64,12 @@ class ReMindRag:
             synonym_threshold = synonym_threshold,
             edge_weight_alpha = edge_weight_coefficient,
             strong_connection_threshold = strong_connection_threshold,
+            use_adaptive_lambda = use_adaptive_lambda,
+            lambda_0 = lambda_0,
+            lambda_min = lambda_min,
+            lambda_max = lambda_max,
+            lambda_beta = lambda_beta,
+            lambda_gamma = lambda_gamma,
             chromadp_pth = self.database_pth,
             tokenizer = tokenizer,
             log_path = log_path
