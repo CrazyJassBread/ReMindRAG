@@ -1,0 +1,142 @@
+[
+    {
+        "index": 0,
+        "title": "José Luis Picardo",
+        "correct": 10,
+        "total": 11,
+        "rate": 0.9090909090909091
+    },
+    {
+        "index": 1,
+        "title": "Urban planning of Barcelona",
+        "correct": 21,
+        "total": 21,
+        "rate": 1.0
+    },
+    {
+        "index": 2,
+        "title": "2023 French pension reform unrest",
+        "correct": 16,
+        "total": 17,
+        "rate": 0.9411764705882353
+    },
+    {
+        "index": 3,
+        "title": "2023 Turkey–Syria earthquake",
+        "correct": 17,
+        "total": 18,
+        "rate": 0.9444444444444444
+    },
+    {
+        "index": 4,
+        "title": "Claude List",
+        "correct": 12,
+        "total": 14,
+        "rate": 0.8571428571428571
+    },
+    {
+        "index": 5,
+        "title": "Climate change in Washington (state)",
+        "correct": 16,
+        "total": 16,
+        "rate": 1.0
+    },
+    {
+        "index": 6,
+        "title": "Execution of Nagaenthran K. Dharmalingam",
+        "correct": 3,
+        "total": 25,
+        "rate": 0.12
+    },
+    {
+        "index": 7,
+        "title": "Foreign Cattle Market",
+        "correct": 13,
+        "total": 13,
+        "rate": 1.0
+    },
+    {
+        "index": 8,
+        "title": "Governorship of Glenn Youngkin",
+        "correct": 19,
+        "total": 19,
+        "rate": 1.0
+    },
+    {
+        "index": 9,
+        "title": "Hells Angels MC criminal allegations and incidents in the United States",
+        "correct": 28,
+        "total": 28,
+        "rate": 1.0
+    },
+    {
+        "index": 10,
+        "title": "History of NBC",
+        "correct": 12,
+        "total": 12,
+        "rate": 1.0
+    },
+    {
+        "index": 11,
+        "title": "Light in painting",
+        "correct": 21,
+        "total": 22,
+        "rate": 0.9545454545454546
+    },
+    {
+        "index": 12,
+        "title": "Nightlife in Belgrade",
+        "correct": 22,
+        "total": 23,
+        "rate": 0.9565217391304348
+    },
+    {
+        "index": 13,
+        "title": "Police brutality by country",
+        "correct": 1,
+        "total": 16,
+        "rate": 0.0625
+    },
+    {
+        "index": 14,
+        "title": "Afghan–Soviet War",
+        "correct": 16,
+        "total": 18,
+        "rate": 0.8888888888888888
+    },
+    {
+        "index": 15,
+        "title": "Stowe Gardens",
+        "correct": 12,
+        "total": 12,
+        "rate": 1.0
+    },
+    {
+        "index": 16,
+        "title": "Street names in Barcelona",
+        "correct": 20,
+        "total": 20,
+        "rate": 1.0
+    },
+    {
+        "index": 17,
+        "title": "Ted Brimble",
+        "correct": 16,
+        "total": 16,
+        "rate": 1.0
+    },
+    {
+        "index": 18,
+        "title": "War crimes in the Russian invasion of Ukraine",
+        "correct": 13,
+        "total": 13,
+        "rate": 1.0
+    },
+    {
+        "index": 19,
+        "title": "57th Medical Detachment",
+        "correct": 55,
+        "total": 56,
+        "rate": 0.9821428571428571
+    }
+]

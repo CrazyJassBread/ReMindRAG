@@ -1,0 +1,8 @@
+Test name: llm-only-simple-mimov2.5
+Start index: 0
+Number of tests: 20
+Parallel processes: 1
+Start time: 20260603_133926
+Model name: mimo-v2.5
+Judge model name: mimo-v2.5
+Use context: True
