@@ -1,0 +1,170 @@
+[
+    {
+        "index": 16,
+        "correct": 1,
+        "total": 1,
+        "rate": 1.0,
+        "usage": {
+            "requests": 20,
+            "prompt_tokens": 27053,
+            "completion_tokens": 6530,
+            "total_tokens": 33583
+        },
+        "construction_usage": {
+            "requests": 0,
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+        },
+        "query_and_grade_usage": {
+            "requests": 20,
+            "prompt_tokens": 27053,
+            "completion_tokens": 6530,
+            "total_tokens": 33583
+        }
+    },
+    {
+        "index": 17,
+        "correct": 1,
+        "total": 1,
+        "rate": 1.0,
+        "usage": {
+            "requests": 35,
+            "prompt_tokens": 42005,
+            "completion_tokens": 11620,
+            "total_tokens": 53625
+        },
+        "construction_usage": {
+            "requests": 0,
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+        },
+        "query_and_grade_usage": {
+            "requests": 35,
+            "prompt_tokens": 42005,
+            "completion_tokens": 11620,
+            "total_tokens": 53625
+        }
+    },
+    {
+        "index": 18,
+        "correct": 1,
+        "total": 1,
+        "rate": 1.0,
+        "usage": {
+            "requests": 4,
+            "prompt_tokens": 1789,
+            "completion_tokens": 341,
+            "total_tokens": 2130
+        },
+        "construction_usage": {
+            "requests": 0,
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+        },
+        "query_and_grade_usage": {
+            "requests": 4,
+            "prompt_tokens": 1789,
+            "completion_tokens": 341,
+            "total_tokens": 2130
+        }
+    },
+    {
+        "index": 19,
+        "correct": 1,
+        "total": 1,
+        "rate": 1.0,
+        "usage": {
+            "requests": 6,
+            "prompt_tokens": 3146,
+            "completion_tokens": 1139,
+            "total_tokens": 4285
+        },
+        "construction_usage": {
+            "requests": 0,
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+        },
+        "query_and_grade_usage": {
+            "requests": 6,
+            "prompt_tokens": 3146,
+            "completion_tokens": 1139,
+            "total_tokens": 4285
+        }
+    },
+    {
+        "index": 20,
+        "correct": 1,
+        "total": 1,
+        "rate": 1.0,
+        "usage": {
+            "requests": 4,
+            "prompt_tokens": 1670,
+            "completion_tokens": 485,
+            "total_tokens": 2155
+        },
+        "construction_usage": {
+            "requests": 0,
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+        },
+        "query_and_grade_usage": {
+            "requests": 4,
+            "prompt_tokens": 1670,
+            "completion_tokens": 485,
+            "total_tokens": 2155
+        }
+    },
+    {
+        "index": 21,
+        "correct": 0,
+        "total": 1,
+        "rate": 0.0,
+        "usage": {
+            "requests": 8,
+            "prompt_tokens": 6508,
+            "completion_tokens": 1886,
+            "total_tokens": 8394
+        },
+        "construction_usage": {
+            "requests": 0,
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+        },
+        "query_and_grade_usage": {
+            "requests": 8,
+            "prompt_tokens": 6508,
+            "completion_tokens": 1886,
+            "total_tokens": 8394
+        }
+    },
+    {
+        "index": 22,
+        "correct": 0,
+        "total": 1,
+        "rate": 0.0,
+        "usage": {
+            "requests": 10,
+            "prompt_tokens": 8466,
+            "completion_tokens": 2745,
+            "total_tokens": 11211
+        },
+        "construction_usage": {
+            "requests": 0,
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+        },
+        "query_and_grade_usage": {
+            "requests": 10,
+            "prompt_tokens": 8466,
+            "completion_tokens": 2745,
+            "total_tokens": 11211
+        }
+    }
+]

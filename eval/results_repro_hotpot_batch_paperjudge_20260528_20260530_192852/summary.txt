@@ -1,0 +1,14 @@
+Test name: repro_hotpot_batch_paperjudge_20260528
+Total correct answers: 4/4
+Overall accuracy: 1.0000
+
+API usage: {'requests': 33, 'prompt_tokens': 28420, 'completion_tokens': 8576, 'total_tokens': 36996}
+
+Construction usage: {'requests': 0, 'prompt_tokens': 0, 'completion_tokens': 0, 'total_tokens': 0}
+Query and grade usage: {'requests': 33, 'prompt_tokens': 28420, 'completion_tokens': 8576, 'total_tokens': 36996}
+
+Results by title:
+Title 11: 1/1 = 1.0000
+Title 12: 1/1 = 1.0000
+Title 13: 1/1 = 1.0000
+Title 14: 1/1 = 1.0000

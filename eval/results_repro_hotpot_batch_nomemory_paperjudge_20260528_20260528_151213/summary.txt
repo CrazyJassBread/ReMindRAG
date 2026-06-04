@@ -1,0 +1,19 @@
+Test name: repro_hotpot_batch_nomemory_paperjudge_20260528
+Total correct answers: 5/9
+Overall accuracy: 0.5556
+
+API usage: {'requests': 368, 'prompt_tokens': 198770, 'completion_tokens': 61836, 'total_tokens': 260606}
+
+Construction usage: {'requests': 276, 'prompt_tokens': 124295, 'completion_tokens': 39682, 'total_tokens': 163977}
+Query and grade usage: {'requests': 92, 'prompt_tokens': 74475, 'completion_tokens': 22154, 'total_tokens': 96629}
+
+Results by title:
+Title 1: 1/1 = 1.0000
+Title 3: 0/1 = 0.0000
+Title 4: 1/1 = 1.0000
+Title 5: 0/1 = 0.0000
+Title 6: 0/1 = 0.0000
+Title 7: 1/1 = 1.0000
+Title 8: 1/1 = 1.0000
+Title 9: 1/1 = 1.0000
+Title 10: 0/1 = 0.0000

@@ -1,0 +1,218 @@
+[
+    {
+        "index": 1,
+        "correct": 1,
+        "total": 1,
+        "rate": 1.0,
+        "usage": {
+            "requests": 39,
+            "prompt_tokens": 19478,
+            "completion_tokens": 5425,
+            "total_tokens": 24903
+        },
+        "construction_usage": {
+            "requests": 30,
+            "prompt_tokens": 12655,
+            "completion_tokens": 3388,
+            "total_tokens": 16043
+        },
+        "query_and_grade_usage": {
+            "requests": 9,
+            "prompt_tokens": 6823,
+            "completion_tokens": 2037,
+            "total_tokens": 8860
+        }
+    },
+    {
+        "index": 3,
+        "correct": 0,
+        "total": 1,
+        "rate": 0.0,
+        "usage": {
+            "requests": 53,
+            "prompt_tokens": 30089,
+            "completion_tokens": 9346,
+            "total_tokens": 39435
+        },
+        "construction_usage": {
+            "requests": 30,
+            "prompt_tokens": 11780,
+            "completion_tokens": 2836,
+            "total_tokens": 14616
+        },
+        "query_and_grade_usage": {
+            "requests": 23,
+            "prompt_tokens": 18309,
+            "completion_tokens": 6510,
+            "total_tokens": 24819
+        }
+    },
+    {
+        "index": 4,
+        "correct": 1,
+        "total": 1,
+        "rate": 1.0,
+        "usage": {
+            "requests": 38,
+            "prompt_tokens": 19113,
+            "completion_tokens": 6025,
+            "total_tokens": 25138
+        },
+        "construction_usage": {
+            "requests": 30,
+            "prompt_tokens": 12864,
+            "completion_tokens": 4226,
+            "total_tokens": 17090
+        },
+        "query_and_grade_usage": {
+            "requests": 8,
+            "prompt_tokens": 6249,
+            "completion_tokens": 1799,
+            "total_tokens": 8048
+        }
+    },
+    {
+        "index": 5,
+        "correct": 0,
+        "total": 1,
+        "rate": 0.0,
+        "usage": {
+            "requests": 48,
+            "prompt_tokens": 27977,
+            "completion_tokens": 8570,
+            "total_tokens": 36547
+        },
+        "construction_usage": {
+            "requests": 30,
+            "prompt_tokens": 12780,
+            "completion_tokens": 3367,
+            "total_tokens": 16147
+        },
+        "query_and_grade_usage": {
+            "requests": 18,
+            "prompt_tokens": 15197,
+            "completion_tokens": 5203,
+            "total_tokens": 20400
+        }
+    },
+    {
+        "index": 6,
+        "correct": 0,
+        "total": 1,
+        "rate": 0.0,
+        "usage": {
+            "requests": 34,
+            "prompt_tokens": 16125,
+            "completion_tokens": 5779,
+            "total_tokens": 21904
+        },
+        "construction_usage": {
+            "requests": 30,
+            "prompt_tokens": 14538,
+            "completion_tokens": 5358,
+            "total_tokens": 19896
+        },
+        "query_and_grade_usage": {
+            "requests": 4,
+            "prompt_tokens": 1587,
+            "completion_tokens": 421,
+            "total_tokens": 2008
+        }
+    },
+    {
+        "index": 7,
+        "correct": 1,
+        "total": 1,
+        "rate": 1.0,
+        "usage": {
+            "requests": 45,
+            "prompt_tokens": 27879,
+            "completion_tokens": 9107,
+            "total_tokens": 36986
+        },
+        "construction_usage": {
+            "requests": 36,
+            "prompt_tokens": 19757,
+            "completion_tokens": 6907,
+            "total_tokens": 26664
+        },
+        "query_and_grade_usage": {
+            "requests": 9,
+            "prompt_tokens": 8122,
+            "completion_tokens": 2200,
+            "total_tokens": 10322
+        }
+    },
+    {
+        "index": 8,
+        "correct": 1,
+        "total": 1,
+        "rate": 1.0,
+        "usage": {
+            "requests": 43,
+            "prompt_tokens": 27442,
+            "completion_tokens": 7808,
+            "total_tokens": 35250
+        },
+        "construction_usage": {
+            "requests": 30,
+            "prompt_tokens": 12985,
+            "completion_tokens": 4667,
+            "total_tokens": 17652
+        },
+        "query_and_grade_usage": {
+            "requests": 13,
+            "prompt_tokens": 14457,
+            "completion_tokens": 3141,
+            "total_tokens": 17598
+        }
+    },
+    {
+        "index": 9,
+        "correct": 1,
+        "total": 1,
+        "rate": 1.0,
+        "usage": {
+            "requests": 34,
+            "prompt_tokens": 14703,
+            "completion_tokens": 4867,
+            "total_tokens": 19570
+        },
+        "construction_usage": {
+            "requests": 30,
+            "prompt_tokens": 12974,
+            "completion_tokens": 4458,
+            "total_tokens": 17432
+        },
+        "query_and_grade_usage": {
+            "requests": 4,
+            "prompt_tokens": 1729,
+            "completion_tokens": 409,
+            "total_tokens": 2138
+        }
+    },
+    {
+        "index": 10,
+        "correct": 0,
+        "total": 1,
+        "rate": 0.0,
+        "usage": {
+            "requests": 34,
+            "prompt_tokens": 15964,
+            "completion_tokens": 4909,
+            "total_tokens": 20873
+        },
+        "construction_usage": {
+            "requests": 30,
+            "prompt_tokens": 13962,
+            "completion_tokens": 4475,
+            "total_tokens": 18437
+        },
+        "query_and_grade_usage": {
+            "requests": 4,
+            "prompt_tokens": 2002,
+            "completion_tokens": 434,
+            "total_tokens": 2436
+        }
+    }
+]

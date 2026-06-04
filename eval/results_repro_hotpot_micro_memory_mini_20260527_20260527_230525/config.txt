@@ -1,0 +1,10 @@
+Test name: repro_hotpot_micro_memory_mini_20260527
+Start index: 1
+Number of tests: 2
+Parallel tests: 1
+Question type: origin
+Backbone model: gpt-4o-mini
+Judge model: gpt-4o-mini
+Update memory: True
+Strong connection threshold: 0.5
+Start time: 20260527_230525

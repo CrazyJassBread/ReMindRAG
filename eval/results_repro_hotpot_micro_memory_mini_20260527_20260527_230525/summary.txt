@@ -1,0 +1,9 @@
+Test name: repro_hotpot_micro_memory_mini_20260527
+Total correct answers: 1/2
+Overall accuracy: 0.5000
+
+API usage: {'requests': 111, 'prompt_tokens': 85957, 'completion_tokens': 26194, 'total_tokens': 112151}
+
+Results by title:
+Title 1: 1/1 = 1.0000
+Title 2: 0/1 = 0.0000

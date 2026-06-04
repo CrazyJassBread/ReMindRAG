@@ -1,0 +1,10 @@
+Test name: repro_hotpot_batch_nomemory_paperjudge_20260528
+Start index: 11
+Number of tests: 20
+Parallel tests: 1
+Question type: similar
+Backbone model: gpt-4o-mini
+Judge model: gpt-4o-2024-11-20
+Update memory: False
+Strong connection threshold: 0.5
+Start time: 20260601_124848

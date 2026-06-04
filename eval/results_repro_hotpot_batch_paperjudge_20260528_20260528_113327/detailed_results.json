@@ -1,0 +1,242 @@
+[
+    {
+        "index": 1,
+        "correct": 1,
+        "total": 1,
+        "rate": 1.0,
+        "usage": {
+            "requests": 40,
+            "prompt_tokens": 20290,
+            "completion_tokens": 6064,
+            "total_tokens": 26354
+        },
+        "construction_usage": {
+            "requests": 30,
+            "prompt_tokens": 12652,
+            "completion_tokens": 3422,
+            "total_tokens": 16074
+        },
+        "query_and_grade_usage": {
+            "requests": 10,
+            "prompt_tokens": 7638,
+            "completion_tokens": 2642,
+            "total_tokens": 10280
+        }
+    },
+    {
+        "index": 2,
+        "correct": 0,
+        "total": 1,
+        "rate": 0.0,
+        "usage": {
+            "requests": 75,
+            "prompt_tokens": 63224,
+            "completion_tokens": 20893,
+            "total_tokens": 84117
+        },
+        "construction_usage": {
+            "requests": 30,
+            "prompt_tokens": 13451,
+            "completion_tokens": 4478,
+            "total_tokens": 17929
+        },
+        "query_and_grade_usage": {
+            "requests": 45,
+            "prompt_tokens": 49773,
+            "completion_tokens": 16415,
+            "total_tokens": 66188
+        }
+    },
+    {
+        "index": 3,
+        "correct": 1,
+        "total": 1,
+        "rate": 1.0,
+        "usage": {
+            "requests": 69,
+            "prompt_tokens": 51253,
+            "completion_tokens": 15836,
+            "total_tokens": 67089
+        },
+        "construction_usage": {
+            "requests": 30,
+            "prompt_tokens": 11785,
+            "completion_tokens": 2929,
+            "total_tokens": 14714
+        },
+        "query_and_grade_usage": {
+            "requests": 39,
+            "prompt_tokens": 39468,
+            "completion_tokens": 12907,
+            "total_tokens": 52375
+        }
+    },
+    {
+        "index": 4,
+        "correct": 1,
+        "total": 1,
+        "rate": 1.0,
+        "usage": {
+            "requests": 39,
+            "prompt_tokens": 19774,
+            "completion_tokens": 6184,
+            "total_tokens": 25958
+        },
+        "construction_usage": {
+            "requests": 30,
+            "prompt_tokens": 12852,
+            "completion_tokens": 3992,
+            "total_tokens": 16844
+        },
+        "query_and_grade_usage": {
+            "requests": 9,
+            "prompt_tokens": 6922,
+            "completion_tokens": 2192,
+            "total_tokens": 9114
+        }
+    },
+    {
+        "index": 5,
+        "correct": 1,
+        "total": 1,
+        "rate": 1.0,
+        "usage": {
+            "requests": 66,
+            "prompt_tokens": 46773,
+            "completion_tokens": 16118,
+            "total_tokens": 62891
+        },
+        "construction_usage": {
+            "requests": 30,
+            "prompt_tokens": 12773,
+            "completion_tokens": 3366,
+            "total_tokens": 16139
+        },
+        "query_and_grade_usage": {
+            "requests": 36,
+            "prompt_tokens": 34000,
+            "completion_tokens": 12752,
+            "total_tokens": 46752
+        }
+    },
+    {
+        "index": 6,
+        "correct": 1,
+        "total": 1,
+        "rate": 1.0,
+        "usage": {
+            "requests": 34,
+            "prompt_tokens": 16165,
+            "completion_tokens": 5979,
+            "total_tokens": 22144
+        },
+        "construction_usage": {
+            "requests": 30,
+            "prompt_tokens": 14535,
+            "completion_tokens": 5472,
+            "total_tokens": 20007
+        },
+        "query_and_grade_usage": {
+            "requests": 4,
+            "prompt_tokens": 1630,
+            "completion_tokens": 507,
+            "total_tokens": 2137
+        }
+    },
+    {
+        "index": 7,
+        "correct": 1,
+        "total": 1,
+        "rate": 1.0,
+        "usage": {
+            "requests": 46,
+            "prompt_tokens": 28655,
+            "completion_tokens": 9839,
+            "total_tokens": 38494
+        },
+        "construction_usage": {
+            "requests": 36,
+            "prompt_tokens": 19780,
+            "completion_tokens": 7106,
+            "total_tokens": 26886
+        },
+        "query_and_grade_usage": {
+            "requests": 10,
+            "prompt_tokens": 8875,
+            "completion_tokens": 2733,
+            "total_tokens": 11608
+        }
+    },
+    {
+        "index": 8,
+        "correct": 1,
+        "total": 1,
+        "rate": 1.0,
+        "usage": {
+            "requests": 43,
+            "prompt_tokens": 25493,
+            "completion_tokens": 7796,
+            "total_tokens": 33289
+        },
+        "construction_usage": {
+            "requests": 30,
+            "prompt_tokens": 12980,
+            "completion_tokens": 4468,
+            "total_tokens": 17448
+        },
+        "query_and_grade_usage": {
+            "requests": 13,
+            "prompt_tokens": 12513,
+            "completion_tokens": 3328,
+            "total_tokens": 15841
+        }
+    },
+    {
+        "index": 9,
+        "correct": 1,
+        "total": 1,
+        "rate": 1.0,
+        "usage": {
+            "requests": 51,
+            "prompt_tokens": 31518,
+            "completion_tokens": 10143,
+            "total_tokens": 41661
+        },
+        "construction_usage": {
+            "requests": 30,
+            "prompt_tokens": 12949,
+            "completion_tokens": 4281,
+            "total_tokens": 17230
+        },
+        "query_and_grade_usage": {
+            "requests": 21,
+            "prompt_tokens": 18569,
+            "completion_tokens": 5862,
+            "total_tokens": 24431
+        }
+    },
+    {
+        "index": 10,
+        "correct": 1,
+        "total": 1,
+        "rate": 1.0,
+        "usage": {
+            "requests": 34,
+            "prompt_tokens": 15955,
+            "completion_tokens": 5020,
+            "total_tokens": 20975
+        },
+        "construction_usage": {
+            "requests": 30,
+            "prompt_tokens": 13951,
+            "completion_tokens": 4590,
+            "total_tokens": 18541
+        },
+        "query_and_grade_usage": {
+            "requests": 4,
+            "prompt_tokens": 2004,
+            "completion_tokens": 430,
+            "total_tokens": 2434
+        }
+    }
+]

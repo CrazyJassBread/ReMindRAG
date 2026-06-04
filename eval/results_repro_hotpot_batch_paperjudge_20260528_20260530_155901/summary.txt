@@ -1,0 +1,30 @@
+Test name: repro_hotpot_batch_paperjudge_20260528
+Total correct answers: 14/20
+Overall accuracy: 0.7000
+
+API usage: {'requests': 1134, 'prompt_tokens': 933144, 'completion_tokens': 258178, 'total_tokens': 1191322}
+
+Construction usage: {'requests': 582, 'prompt_tokens': 254003, 'completion_tokens': 80041, 'total_tokens': 334044}
+Query and grade usage: {'requests': 552, 'prompt_tokens': 679141, 'completion_tokens': 178137, 'total_tokens': 857278}
+
+Results by title:
+Title 11: 1/1 = 1.0000
+Title 12: 1/1 = 1.0000
+Title 13: 0/1 = 0.0000
+Title 14: 0/1 = 0.0000
+Title 15: 1/1 = 1.0000
+Title 16: 1/1 = 1.0000
+Title 17: 1/1 = 1.0000
+Title 18: 1/1 = 1.0000
+Title 19: 1/1 = 1.0000
+Title 20: 1/1 = 1.0000
+Title 21: 0/1 = 0.0000
+Title 22: 0/1 = 0.0000
+Title 23: 0/1 = 0.0000
+Title 24: 1/1 = 1.0000
+Title 25: 1/1 = 1.0000
+Title 26: 0/1 = 0.0000
+Title 27: 1/1 = 1.0000
+Title 28: 1/1 = 1.0000
+Title 29: 1/1 = 1.0000
+Title 30: 1/1 = 1.0000

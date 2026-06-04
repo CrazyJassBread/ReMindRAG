@@ -1,0 +1,98 @@
+[
+    {
+        "index": 11,
+        "correct": 1,
+        "total": 1,
+        "rate": 1.0,
+        "usage": {
+            "requests": 13,
+            "prompt_tokens": 10118,
+            "completion_tokens": 3766,
+            "total_tokens": 13884
+        },
+        "construction_usage": {
+            "requests": 0,
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+        },
+        "query_and_grade_usage": {
+            "requests": 13,
+            "prompt_tokens": 10118,
+            "completion_tokens": 3766,
+            "total_tokens": 13884
+        }
+    },
+    {
+        "index": 12,
+        "correct": 1,
+        "total": 1,
+        "rate": 1.0,
+        "usage": {
+            "requests": 12,
+            "prompt_tokens": 14706,
+            "completion_tokens": 3907,
+            "total_tokens": 18613
+        },
+        "construction_usage": {
+            "requests": 0,
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+        },
+        "query_and_grade_usage": {
+            "requests": 12,
+            "prompt_tokens": 14706,
+            "completion_tokens": 3907,
+            "total_tokens": 18613
+        }
+    },
+    {
+        "index": 13,
+        "correct": 1,
+        "total": 1,
+        "rate": 1.0,
+        "usage": {
+            "requests": 4,
+            "prompt_tokens": 1772,
+            "completion_tokens": 455,
+            "total_tokens": 2227
+        },
+        "construction_usage": {
+            "requests": 0,
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+        },
+        "query_and_grade_usage": {
+            "requests": 4,
+            "prompt_tokens": 1772,
+            "completion_tokens": 455,
+            "total_tokens": 2227
+        }
+    },
+    {
+        "index": 14,
+        "correct": 1,
+        "total": 1,
+        "rate": 1.0,
+        "usage": {
+            "requests": 4,
+            "prompt_tokens": 1824,
+            "completion_tokens": 448,
+            "total_tokens": 2272
+        },
+        "construction_usage": {
+            "requests": 0,
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+        },
+        "query_and_grade_usage": {
+            "requests": 4,
+            "prompt_tokens": 1824,
+            "completion_tokens": 448,
+            "total_tokens": 2272
+        }
+    }
+]
