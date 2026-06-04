@@ -1,0 +1,11 @@
+Test name: adaptive-simple-mimov2.5
+Start index: 0
+Number of tests: 20
+Parallel processes: 2
+Use adaptive lambda: True
+Lambda 0: 0.55
+Lambda min: 0.35
+Lambda max: 0.75
+Lambda beta: 0.1
+Lambda gamma: 0.08
+Start time: 20260603_181226

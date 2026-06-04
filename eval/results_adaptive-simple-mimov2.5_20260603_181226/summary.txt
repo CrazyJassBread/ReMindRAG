@@ -1,0 +1,23 @@
+Test name: adaptive-simple-mimov2.5
+Total correct answers: 309/349
+Overall accuracy: 0.8854
+
+Per-title results:
+Title 0 (José Luis Picardo): 9/11 = 0.8182
+Title 1 (Urban planning of Barcelona): 17/21 = 0.8095
+Title 2 (2023 French pension reform unrest): 15/17 = 0.8824
+Title 3 (2023 Turkey–Syria earthquake): 16/18 = 0.8889
+Title 4 (Claude List): 10/14 = 0.7143
+Title 5 (Climate change in Washington (state)): 15/16 = 0.9375
+Title 7 (Foreign Cattle Market): 12/13 = 0.9231
+Title 8 (Governorship of Glenn Youngkin): 17/19 = 0.8947
+Title 10 (History of NBC): 11/12 = 0.9167
+Title 9 (Hells Angels MC criminal allegations and incidents in the United States): 26/28 = 0.9286
+Title 12 (Nightlife in Belgrade): 21/23 = 0.9130
+Title 11 (Light in painting): 20/22 = 0.9091
+Title 15 (Stowe Gardens): 11/12 = 0.9167
+Title 14 (Afghan–Soviet War): 18/18 = 1.0000
+Title 16 (Street names in Barcelona): 18/20 = 0.9000
+Title 17 (Ted Brimble): 10/16 = 0.6250
+Title 18 (War crimes in the Russian invasion of Ukraine): 11/13 = 0.8462
+Title 19 (57th Medical Detachment): 52/56 = 0.9286
