@@ -1,0 +1,65 @@
+[
+    {
+        "index": 0,
+        "title": "José Luis Picardo",
+        "correct": 10,
+        "total": 11,
+        "rate": 0.9090909090909091
+    },
+    {
+        "index": 3,
+        "title": "2023 Turkey–Syria earthquake",
+        "correct": 16,
+        "total": 18,
+        "rate": 0.8888888888888888
+    },
+    {
+        "index": 5,
+        "title": "Climate change in Washington (state)",
+        "correct": 16,
+        "total": 16,
+        "rate": 1.0
+    },
+    {
+        "index": 10,
+        "title": "History of NBC",
+        "correct": 12,
+        "total": 12,
+        "rate": 1.0
+    },
+    {
+        "index": 12,
+        "title": "Nightlife in Belgrade",
+        "correct": 21,
+        "total": 23,
+        "rate": 0.9130434782608695
+    },
+    {
+        "index": 11,
+        "title": "Light in painting",
+        "correct": 21,
+        "total": 22,
+        "rate": 0.9545454545454546
+    },
+    {
+        "index": 14,
+        "title": "Afghan–Soviet War",
+        "correct": 18,
+        "total": 18,
+        "rate": 1.0
+    },
+    {
+        "index": 16,
+        "title": "Street names in Barcelona",
+        "correct": 15,
+        "total": 20,
+        "rate": 0.75
+    },
+    {
+        "index": 18,
+        "title": "War crimes in the Russian invasion of Ukraine",
+        "correct": 12,
+        "total": 13,
+        "rate": 0.9230769230769231
+    }
+]

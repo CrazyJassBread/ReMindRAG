@@ -1,0 +1,6 @@
+Test name: main-long-mimov2.5
+Total correct answers: 6/10
+Overall accuracy: 0.6000
+
+Per-title results:
+Title 17 (Ted Brimble): 6/10 = 0.6000

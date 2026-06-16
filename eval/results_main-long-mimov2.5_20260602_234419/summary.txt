@@ -1,0 +1,6 @@
+Test name: main-long-mimov2.5
+Total correct answers: 5/10
+Overall accuracy: 0.5000
+
+Per-title results:
+Title 6 (Execution of Nagaenthran K. Dharmalingam): 5/10 = 0.5000

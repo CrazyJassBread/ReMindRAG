@@ -1,0 +1,23 @@
+Test name: main-simple-mimov2.5
+Total correct answers: 313/349
+Overall accuracy: 0.8968
+
+Per-title results:
+Title 3 (2023 Turkey–Syria earthquake): 16/18 = 0.8889
+Title 0 (José Luis Picardo): 9/11 = 0.8182
+Title 2 (2023 French pension reform unrest): 15/17 = 0.8824
+Title 5 (Climate change in Washington (state)): 16/16 = 1.0000
+Title 4 (Claude List): 11/14 = 0.7857
+Title 7 (Foreign Cattle Market): 10/13 = 0.7692
+Title 8 (Governorship of Glenn Youngkin): 16/19 = 0.8421
+Title 10 (History of NBC): 12/12 = 1.0000
+Title 1 (Urban planning of Barcelona): 19/21 = 0.9048
+Title 9 (Hells Angels MC criminal allegations and incidents in the United States): 27/28 = 0.9643
+Title 11 (Light in painting): 19/22 = 0.8636
+Title 14 (Afghan–Soviet War): 18/18 = 1.0000
+Title 15 (Stowe Gardens): 12/12 = 1.0000
+Title 12 (Nightlife in Belgrade): 21/23 = 0.9130
+Title 16 (Street names in Barcelona): 15/20 = 0.7500
+Title 18 (War crimes in the Russian invasion of Ukraine): 12/13 = 0.9231
+Title 19 (57th Medical Detachment): 52/56 = 0.9286
+Title 17 (Ted Brimble): 13/16 = 0.8125

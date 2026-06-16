@@ -1,0 +1,72 @@
+[
+    {
+        "index": 1,
+        "title": "Urban planning of Barcelona",
+        "correct": 5,
+        "total": 9,
+        "rate": 0.5555555555555556
+    },
+    {
+        "index": 4,
+        "title": "Claude List",
+        "correct": 4,
+        "total": 5,
+        "rate": 0.8
+    },
+    {
+        "index": 3,
+        "title": "2023 Turkey–Syria earthquake",
+        "correct": 5,
+        "total": 10,
+        "rate": 0.5
+    },
+    {
+        "index": 8,
+        "title": "Governorship of Glenn Youngkin",
+        "correct": 4,
+        "total": 5,
+        "rate": 0.8
+    },
+    {
+        "index": 10,
+        "title": "History of NBC",
+        "correct": 5,
+        "total": 5,
+        "rate": 1.0
+    },
+    {
+        "index": 11,
+        "title": "Light in painting",
+        "correct": 4,
+        "total": 6,
+        "rate": 0.6666666666666666
+    },
+    {
+        "index": 12,
+        "title": "Nightlife in Belgrade",
+        "correct": 6,
+        "total": 8,
+        "rate": 0.75
+    },
+    {
+        "index": 14,
+        "title": "Afghan–Soviet War",
+        "correct": 7,
+        "total": 8,
+        "rate": 0.875
+    },
+    {
+        "index": 16,
+        "title": "Street names in Barcelona",
+        "correct": 4,
+        "total": 6,
+        "rate": 0.6666666666666666
+    },
+    {
+        "index": 19,
+        "title": "57th Medical Detachment",
+        "correct": 3,
+        "total": 5,
+        "rate": 0.6
+    }
+]

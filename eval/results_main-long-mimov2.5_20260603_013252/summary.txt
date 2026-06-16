@@ -1,0 +1,6 @@
+Test name: main-long-mimov2.5
+Total correct answers: 1/8
+Overall accuracy: 0.1250
+
+Per-title results:
+Title 9 (Hells Angels MC criminal allegations and incidents in the United States): 1/8 = 0.1250

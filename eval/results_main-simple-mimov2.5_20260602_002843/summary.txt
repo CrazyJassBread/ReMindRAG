@@ -1,0 +1,14 @@
+Test name: main-simple-mimov2.5
+Total correct answers: 141/153
+Overall accuracy: 0.9216
+
+Per-title results:
+Title 0 (José Luis Picardo): 10/11 = 0.9091
+Title 3 (2023 Turkey–Syria earthquake): 16/18 = 0.8889
+Title 5 (Climate change in Washington (state)): 16/16 = 1.0000
+Title 10 (History of NBC): 12/12 = 1.0000
+Title 12 (Nightlife in Belgrade): 21/23 = 0.9130
+Title 11 (Light in painting): 21/22 = 0.9545
+Title 14 (Afghan–Soviet War): 18/18 = 1.0000
+Title 16 (Street names in Barcelona): 15/20 = 0.7500
+Title 18 (War crimes in the Russian invasion of Ukraine): 12/13 = 0.9231

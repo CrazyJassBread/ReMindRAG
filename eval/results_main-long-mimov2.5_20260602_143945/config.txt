@@ -1,0 +1,5 @@
+Test name: main-long-mimov2.5
+Start index: 0
+Number of tests: 20
+Parallel processes: 4
+Start time: 20260602_143945
