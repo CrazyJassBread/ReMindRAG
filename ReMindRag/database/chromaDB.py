@@ -5,6 +5,7 @@ from ..chunking import ChunkerBase
 from .data_extract import handle_file, handle_file_folder, handle_content
 from ..utils.math_functions import edge_weight_coefficient
 from ..utils.logger import setup_logger
+from ..utils.timing import emit_timing
 from ..retrieval.adaptive_lambda import compute_adaptive_lambda
 
 
@@ -14,6 +15,7 @@ from typing import List, Dict, Any, Tuple
 import numpy as np
 import math
 import logging
+import time
 from transformers import AutoTokenizer
 
 
@@ -81,14 +83,22 @@ class ChromaDBManager:
         self.add_extracted_data(extracted_data)
 
     def add_content(self, content, language):
+        started_at = time.perf_counter()
+        extract_started_at = time.perf_counter()
         extracted_data = handle_content(self.logger, content, self.chunk_agent, self.chunker, language)
+        emit_timing(self.logger, "database.content_extract", extract_started_at)
+        index_started_at = time.perf_counter()
         self.add_extracted_data(extracted_data)
+        emit_timing(self.logger, "database.content_index", index_started_at)
+        emit_timing(self.logger, "database.add_content_complete", started_at)
 
 
     def add_extracted_data(self, extracted_data):
+        started_at = time.perf_counter()
         synonym_mappings = {}
         chunk_id_list = []
-        for data in extracted_data:
+        for chunk_number, data in enumerate(extracted_data):
+            chunk_started_at = time.perf_counter()
             chunk_id = self.add_chunk(data["chunk"])
             chunk_id_list.append(chunk_id)
             
@@ -105,6 +115,14 @@ class ChromaDBManager:
                     relation[2] = synonym_mappings[relation[2]]
                 
                 self.add_relation(relation)
+            emit_timing(
+                self.logger,
+                "database.chunk.index_complete",
+                chunk_started_at,
+                chunk=chunk_number,
+                entities=len(data["entity"]),
+                relations=len(data["relation"]),
+            )
 
         for i in range(len(chunk_id_list)-1):
             anchor_id1 = f"anchor-{chunk_id_list[i]}"
@@ -120,6 +138,7 @@ class ChromaDBManager:
                 embeddings=[np.zeros(self.hidden_size, dtype=np.float32)]
                 # embeddings=[self.embedding.sentence_embedding(relation_text)]
             )
+        emit_timing(self.logger, "database.index_complete", started_at, chunks=len(extracted_data))
     
 
     def add_entity(self, entity, chunk_id, chunk_title):

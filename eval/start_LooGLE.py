@@ -1,12 +1,13 @@
 import subprocess
 import argparse
 import os
+import sys
 import time
 from datetime import datetime
 import json
 
 def run_title_test(title_index, test_name, data_type, question_type, model_name, args):
-    cmd = [ "python", "eval_LooGLE.py", 
+    cmd = [sys.executable, "-u", "eval_LooGLE.py",
             "--title_index", str(title_index), 
             "--test_name", test_name,
             "--data_type", data_type,

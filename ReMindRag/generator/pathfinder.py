@@ -5,8 +5,10 @@ from .prompts import chunk_summary_prompt, judge_sufficient_information_prompt, 
 
 from ..utils.decorators import retry_json_parsing ,check_keys, unpack_cot_ans
 from ..utils.logger import setup_logger
+from ..utils.timing import emit_timing
 from typing import List, Dict
 import logging
+import time
 
 
 
@@ -34,6 +36,7 @@ class PathFinder():
         
 
     def get_query_ans(self, query, do_update, search_keys, max_jumps):
+        pathfinder_started_at = time.perf_counter()
         self.logger.info("Start PathFinder Process...")
         self.entity = []
         self.chunk = []
@@ -48,6 +51,7 @@ class PathFinder():
         self.database_query = query
 
 
+        quick_search_started_at = time.perf_counter()
         query_embedding = self.database.embedding.sentence_embedding(query)
         results = self.database.entity_collection.query(
             query_embeddings=[query_embedding],
@@ -101,14 +105,17 @@ class PathFinder():
         
         for entity_iter in self.entity:
             self.out_dgree[entity_iter], _ =self.get_out_dgree(entity_iter)
+        emit_timing(self.logger, "pathfinder.quick_search", quick_search_started_at, entities=len(self.entity), chunks=len(self.chunk))
         
         self.logger.info(f"Quick Search Results --- entity:{len(self.entity)}, chunk:{len(self.chunk)}, edge:{len(self.edge)}.")
         self.logger.debug(f"Quick Search Entity List:\n{self.entity}")
         self.logger.debug(f"Quick Search Chunk List:\n{self.chunk}")
         self.logger.debug(f"Quick Search Edge List:\n{self.edge}")
+        summary_started_at = time.perf_counter()
         if self.chunk:
             for chunk_iter in self.chunk:
                 self.summary[f"chunk:{chunk_iter}"] = self.get_chunk_summary(chunk_iter)
+        emit_timing(self.logger, "pathfinder.initial_summaries", summary_started_at, chunks=len(self.chunk))
         self.logger.debug(f"Chunk Summary:\n{self.summary}")
 
         enough_str = self.judge_sufficient_information()
@@ -124,6 +131,7 @@ class PathFinder():
 
         jumps = 0
         
+        traversal_started_at = time.perf_counter()
         while not enough:
             self.logger.debug(f"Out Dgree: {self.out_dgree}")
             processed_relations = []
@@ -264,7 +272,7 @@ class PathFinder():
                 break
             
             self.logger.info("=============================================================================================================")
-        
+        emit_timing(self.logger, "pathfinder.traversal", traversal_started_at, jumps=jumps)
         
 
         self.logger.info(f"Stop Search --- Jumps: {jumps}")
@@ -276,6 +284,7 @@ class PathFinder():
         self.logger.debug(f"Chunks : {self.chunk}")
         self.logger.debug(f"Paths:\n{self.path}")
         if do_update:
+            update_started_at = time.perf_counter()
             self.logger.info("Update Knowledge Graph.")
 
             final_confirm_paths = []
@@ -307,18 +316,21 @@ class PathFinder():
             self.logger.debug(f"Enhance Edges:\n{final_confirm_paths}")
             self.database.punish_edge_weight(self.database_query, punish_paths)
             self.logger.debug(f"Punish Edges:\n{punish_paths}")
+            emit_timing(self.logger, "pathfinder.update", update_started_at)
         else:
             self.logger.info("Skip Update.")
-                
+        emit_timing(self.logger, "pathfinder.complete", pathfinder_started_at, jumps=jumps)
         return self.summary, self.edge
 
 
 
     def get_chunk_summary(self, chunk_id):
+        started_at = time.perf_counter()
         chunk_data = self.database.chunk_collection.get(ids = [chunk_id], include=['documents','metadatas'])
         chunk_tokens = chunk_data["metadatas"][0]['tokens']
         chunk_document = chunk_data["documents"][0]
         if chunk_tokens < self.chunk_summary_threshold:
+            emit_timing(self.logger, "pathfinder.chunk_summary", started_at, chunk=chunk_id, mode="raw", tokens=chunk_tokens)
             return chunk_document
         
 
@@ -330,10 +342,12 @@ class PathFinder():
             chunk_document = chunk_document
         )
         response = self.agent.generate_response("", [{"role":"user","content":input_msg}])
+        emit_timing(self.logger, "pathfinder.chunk_summary", started_at, chunk=chunk_id, mode="llm", tokens=chunk_tokens)
         return response
 
     @unpack_cot_ans
     def judge_sufficient_information(self, error_chat_history = None):
+        started_at = time.perf_counter()
         input_msg = judge_sufficient_information_prompt.format(
             query = self.query,
             entity_list = str(self.entity),
@@ -342,11 +356,13 @@ class PathFinder():
             chunk_summary = self.summary
         )
         response = self.agent.generate_response("", [{"role":"user","content":input_msg}]+ (error_chat_history or []))
+        emit_timing(self.logger, "pathfinder.judge_sufficient", started_at)
         self.logger.debug(f"Function judge_sufficient_information Output:\n{response}")
         return response
 
     @unpack_cot_ans
     def find_next_node(self, c_node, relation, connection, anchor_chunk_titles, find_chunk_already_in, error_chat_history = None):
+        started_at = time.perf_counter()
         input_msg = find_next_node_prompt.format(
             query = self.query,
             entity_list = str(self.entity),
@@ -360,12 +376,14 @@ class PathFinder():
             connection_cnode = str(connection)
         )
         response = self.agent.generate_response("", [{"role":"user","content":input_msg}] + find_chunk_already_in + (error_chat_history or []))
+        emit_timing(self.logger, "pathfinder.find_next_node", started_at)
         self.logger.debug(f"Function find_next_node Output:\n{response}")
         return response
     
     @check_keys("edges","chunks")
     @unpack_cot_ans
     def get_update_relation_and_chunk(self, error_chat_history = None):
+        started_at = time.perf_counter()
         input_msg = reward_or_punishment_prompt.format(
             query = self.query,
             entity_list = str(self.entity),
@@ -374,6 +392,7 @@ class PathFinder():
             chunk_summary = self.summary,
         )
         response = self.agent.generate_response("", [{"role":"user","content":input_msg}] + (error_chat_history or []))
+        emit_timing(self.logger, "pathfinder.plan_update", started_at)
         self.logger.debug(f"Function get_update_relation_and_chunk Output:\n{response}")
         return response
     

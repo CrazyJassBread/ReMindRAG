@@ -1,10 +1,12 @@
 from ..llms import AgentBase
 from ..utils.decorators import check_keys, retry_json_parsing
+from ..utils.timing import emit_timing
 from ..chunking import ChunkerBase
 from .prompts import entity_extract_prompt, relation_extract_prompt, chunk_title_get_prompt, relation_num_error_rewrite_prompt
 
 import json
 import os
+import time
 from typing import List, Dict
 
 from docx.table import Table
@@ -31,17 +33,24 @@ def generate_chunk_title(agent:AgentBase , chunk_text:str):
 
 
 def handle_content(logger, content:str, agent:AgentBase, chunker:ChunkerBase, language:str) -> List[Dict[str,str]]:
+    handle_started_at = time.perf_counter()
     max_retries = 3
     logger.info("Chunking...")
+    chunking_started_at = time.perf_counter()
     chunks = chunker.chunk_text(content, language)
+    emit_timing(logger, "database.chunking", chunking_started_at, chunks=len(chunks))
     logger.info(f"Get {len(chunks)} Chunks.")
     extracted_text = []
 
     for chunk_num, chunk in enumerate(chunks):
+        chunk_started_at = time.perf_counter()
         logger.info(f"Do Infomation Extraction in Chunk {chunk_num}/{len(chunks)}")
         # print(f"================================\nchunk now:\n{chunk}")
+        entity_started_at = time.perf_counter()
         entity_list = generate_entity_response(agent, chunk)
+        emit_timing(logger, "database.chunk.entity_extract", entity_started_at, chunk=chunk_num)
         temp_error_chat_history = []
+        relation_started_at = time.perf_counter()
         for i in range(max_retries):
             relation_check = True
             relation_list = generate_relation_response(agent, chunk, entity_list, temp_error_chat_history)
@@ -54,16 +63,21 @@ def handle_content(logger, content:str, agent:AgentBase, chunker:ChunkerBase, la
                     break
             if relation_check:
                 break
+        emit_timing(logger, "database.chunk.relation_extract", relation_started_at, chunk=chunk_num, attempts=i + 1)
 
+        title_started_at = time.perf_counter()
         chunk_title = generate_chunk_title(agent, chunk)
+        emit_timing(logger, "database.chunk.title_generate", title_started_at, chunk=chunk_num)
         # chunk_title = chunk
         extracted_text_iter = {}
         extracted_text_iter["chunk"] = {"title":chunk_title, "content":chunk}
         extracted_text_iter["entity"] = entity_list
         extracted_text_iter["relation"] =relation_list
         extracted_text.append(extracted_text_iter)
+        emit_timing(logger, "database.chunk.extract_complete", chunk_started_at, chunk=chunk_num)
     
     logger.info("Finish Infomation Extraction.")
+    emit_timing(logger, "database.extract_complete", handle_started_at, chunks=len(chunks))
     return extracted_text
 
 
@@ -153,4 +167,3 @@ def handle_file_folder(logger, agent: AgentBase, chunker: ChunkerBase, folder_pt
         print("No data found.")
 
     return extracted_data
-

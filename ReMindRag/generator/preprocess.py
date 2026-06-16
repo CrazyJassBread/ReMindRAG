@@ -5,10 +5,12 @@ from .pathfinder import PathFinder
 
 from ..utils.decorators import retry_json_parsing ,check_keys, unpack_cot_ans
 from ..utils.logger import setup_logger
+from ..utils.timing import emit_timing
 from typing import List, Dict
 import logging
 import json
 import os
+import time
 
 import concurrent.futures
 
@@ -28,6 +30,7 @@ class PreProcessing():
             self.logger.info(f"Created New Cache : {f'{self.save_dir}/split_question_cache.json'}")
 
     def query_main(self, system_prompt, chat_history, user_input, search_key_nums, max_jumps, max_split_question_num, force_do_rag, do_update):
+        query_started_at = time.perf_counter()
         self.logger.info("---------------------------------------------------------------------------------------------------------")
         self.logger.info("Start Query Process...")
 
@@ -44,34 +47,48 @@ class PreProcessing():
         response = ""
         if need_rag:
             chat_history_str = self.change_chat_history_to_str(chat_history)
+            split_started_at = time.perf_counter()
             rewritten_querys = self.get_spilt_question(chat_history_str, user_input, max_split_question_num)
+            emit_timing(self.logger, "query.split", split_started_at, queries=len(rewritten_querys))
 
             rewritten_query_and_ans = {}
             final_chunk_summary = []
             final_edges = []
 
             if len(rewritten_querys) == 1:
+                pathfinder_started_at = time.perf_counter()
                 final_chunk_summary, final_edges = self.path_finder.get_query_ans(rewritten_querys[0], do_update, search_key_nums, max_jumps)
+                emit_timing(self.logger, "query.pathfinder", pathfinder_started_at)
+                generation_started_at = time.perf_counter()
                 response = self.generate_temp_response(chat_history_str, system_prompt, rewritten_querys[0], final_chunk_summary, final_edges)
+                emit_timing(self.logger, "query.answer_generation", generation_started_at)
                 final_chunk_summary = [final_chunk_summary]
             else:
                 for rewritten_query in rewritten_querys:
+                    pathfinder_started_at = time.perf_counter()
                     chunk_summary, edges = self.path_finder.get_query_ans(rewritten_query, do_update, search_key_nums, max_jumps)
+                    emit_timing(self.logger, "query.pathfinder", pathfinder_started_at)
                     final_chunk_summary.append(chunk_summary)
                     final_edges = final_edges + edges
+                    generation_started_at = time.perf_counter()
                     temp_response = self.generate_temp_response(chat_history_str, system_prompt, rewritten_query, chunk_summary, edges)
+                    emit_timing(self.logger, "query.answer_generation", generation_started_at)
                     rewritten_query_and_ans[rewritten_query] = temp_response
                     self.logger.info(f"Splited Question: {rewritten_query}\n Ans:{temp_response}")
+                final_generation_started_at = time.perf_counter()
                 response = self.generate_final_response(chat_history_str, user_input, rewritten_query_and_ans)
+                emit_timing(self.logger, "query.final_answer_generation", final_generation_started_at)
             
             self.logger.info(f"Origin Query: {user_input}")
             self.logger.info(f"Response:\n{response}")
             self.logger.info("End PreProcessing Process.")
+            emit_timing(self.logger, "query.complete", query_started_at)
             return response, final_chunk_summary, final_edges
             
         else:
             self.logger.debug("Skip the RAG search, generate directly.")
             response = self.agent.generate_response(system_prompt, chat_history+[{"role":"user","content":user_input}])
+            emit_timing(self.logger, "query.complete", query_started_at)
             return response, [], []
 
         
